@@ -70,7 +70,7 @@ const Login = () => {
           </button>
 
           <Link href="/access/signup">
-            <a>Sing Up</a>
+            <a>Sign Up</a>
           </Link>
         </form>
       </div>

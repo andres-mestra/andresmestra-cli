@@ -14,7 +14,7 @@ import {
   form__button,
 } from '../../styles/components/accessForm.module.scss'
 
-const SingUp = () => {
+const SignUp = () => {
   const formik = useFormik({
     ...signUpInit,
     onSubmit: (values) => {
@@ -33,7 +33,7 @@ const SingUp = () => {
       <div className={form__container}>
         <form className={form} onSubmit={formik.handleSubmit}>
           <div className={form__title}>
-            <h1>Sing Up</h1>
+            <h1>Sign Up</h1>
           </div>
           <div className={form__control__group}>
             <Icon
@@ -128,4 +128,4 @@ const SingUp = () => {
   )
 }
 
-export default SingUp
+export default SignUp
