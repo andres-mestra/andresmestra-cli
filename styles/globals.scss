@@ -1,3 +1,16 @@
+//COLOR VARIABLES
+:root {
+  --blue-light-1: #3fb0ef;
+  --blue-ligh-2: #50b6ed;
+  --grey-dark: #f2f4f7;
+  --grey-dark-1: #e8f0fe;
+  --grey-dark-2: #d6e3eb;
+  --grey-dark-3: #848484;
+  --white: #ffffff;
+  --black: #000000;
+  --black-1: #343f44;
+}
+
 *,
 *::before,
 *::after {
@@ -25,4 +38,13 @@ a {
   &:active {
     text-decoration: none;
   }
+}
+
+.btn {
+  border: none;
+  padding: 1.2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: capitalize;
 }

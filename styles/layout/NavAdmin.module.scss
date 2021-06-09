@@ -1,0 +1,22 @@
+.nav {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 5rem 1fr;
+  padding: 0.5rem;
+  border-right: 1px solid var(--grey-dark);
+
+  &__header {
+    align-self: center;
+    div {
+      height: 3rem;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-row-gap: 2rem;
+  }
+}

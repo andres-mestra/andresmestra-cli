@@ -1,10 +1,11 @@
 import LayoutAdmin from '../../components/Layout/LayoutAdmin'
+import NavAdmin from '../../components/Layout/NavAdmin'
 
 const Admin = () => {
   return (
     <>
       <LayoutAdmin>
-        <h1>Admin</h1>
+        <NavAdmin />
       </LayoutAdmin>
     </>
   )
