@@ -4,7 +4,11 @@ import { useQuery, gql } from '@apollo/client'
 import urlParse from 'url-parse'
 import Logo from '../Logo'
 import NavList from './NavList'
-import sty from '../../styles/layout/NavAdmin.module.scss'
+import {
+  nav,
+  nav__header,
+  nav__body,
+} from '../../styles/layout/NavAdmin.module.scss'
 
 const QUERY = gql`
   query allPosts {
@@ -50,13 +54,13 @@ const NavAdmin = () => {
   //const { data, loading, error } = useQuery(QUERY)
 
   return (
-    <nav className={sty.nav}>
-      <header className={sty.nav__header}>
+    <nav className={nav}>
+      <header className={nav__header}>
         <div>
           <Logo />
         </div>
       </header>
-      <section className={sty.nav__body}>
+      <section className={nav__body}>
         <NavList title={itemsManage.title} items={itemsManage.items} />
       </section>
     </nav>

@@ -1,13 +1,17 @@
-import sty from '../../styles/layout/navList.module.scss'
+import {
+  navList,
+  navList__items,
+  navList__title,
+} from '../../styles/layout/navList.module.scss'
 import NavListItem from './NavListItem'
 
 const NavList = ({ title, items }) => {
   return (
-    <div className={sty.navList}>
-      <div className={sty.navList__title}>
+    <div className={navList}>
+      <div className={navList__title}>
         <p>{title}</p>
       </div>
-      <ul className={sty.navList__items}>
+      <ul className={navList__items}>
         {items.map((item) => {
           return <NavListItem {...item} key={item.text} />
         })}
