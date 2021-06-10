@@ -9,6 +9,7 @@
   --white: #ffffff;
   --black: #000000;
   --black-1: #343f44;
+  --red: #ff4d4f;
 }
 
 *,
@@ -42,6 +43,7 @@ a {
 
 .btn {
   border: none;
+  cursor: pointer;
   padding: 1.2rem;
   border-radius: 5px;
   font-weight: 600;
