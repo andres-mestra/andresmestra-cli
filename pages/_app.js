@@ -1,11 +1,14 @@
-import { ApolloProvider } from '@apollo/client'
 import client from '../config/apollo'
+import { ApolloProvider } from '@apollo/client'
+import { AuthProvider } from '../auth/AuthContext'
 import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
-      <Component {...pageProps} />
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
     </ApolloProvider>
   )
 }

@@ -20,8 +20,7 @@
     border-radius: 5px;
     color: var(--grey-dark-3);
     display: grid;
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: repeat(min-content);
+    grid-template-columns: max-content 1fr;
     align-items: center;
     grid-column-gap: 1rem;
     padding: 1.3rem;

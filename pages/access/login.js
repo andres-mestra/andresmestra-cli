@@ -1,5 +1,11 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useMutation } from '@apollo/client'
 import { useFormik } from 'formik'
+import Swal from 'sweetalert2'
+
+import client from '../../config/apollo'
+import { LOGIN } from '../../queries/authQueries'
 import { loginInit } from '../../utils/formInit'
 import LayoutAccess from '../../components/Layout/LayoutAccess'
 import FormGroup from '../../components/FormGroup'
@@ -12,11 +18,27 @@ import {
 } from '../../styles/components/accessForm.module.scss'
 
 const Login = () => {
+  const router = useRouter()
+  const [login] = useMutation(LOGIN)
+
   const formik = useFormik({
     ...loginInit,
-    onSubmit: (values) => {
-      //TODO: Login con backend
-      console.log(values)
+    onSubmit: async () => {
+      try {
+        Swal.showLoading()
+
+        const { data } = await login({
+          variables: { email, password },
+        })
+
+        localStorage.setItem('token', data.login.token)
+        await client.resetStore()
+        Swal.close()
+
+        router.replace('/admin')
+      } catch ({ message }) {
+        Swal.fire('error', message, 'error')
+      }
     },
   })
 

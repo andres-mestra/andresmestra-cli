@@ -2,11 +2,11 @@ import * as Yup from 'yup'
 
 export const signUpInit = {
   initialValues: {
-    username: '',
-    jobTitle: '',
-    email: '',
-    password: '',
-    password2: '',
+    username: 'hola',
+    jobTitle: 'job hola',
+    email: 'hola@mail.com',
+    password: 'holamundo',
+    password2: 'holamundo',
   },
   validationSchema: Yup.object({
     username: Yup.string().required('Username requerido'),

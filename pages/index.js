@@ -18,9 +18,14 @@ export default function Home() {
         <Link href="/admin">
           <a>Admin</a>
         </Link>
-        <br />
         <Link href="/blog">
           <a>Blog</a>
+        </Link>
+        <Link href="/access/login">
+          <a>Login</a>
+        </Link>
+        <Link href="/access/signup">
+          <a>SignUp</a>
         </Link>
       </main>
     </div>

@@ -47,7 +47,6 @@ const NavAdmin = () => {
   }
   useEffect(() => {
     const hash = urlParse(asPath).hash.replace('#', '')
-    console.log(hash)
     handleChangeHash(hash)
   }, [asPath])
 

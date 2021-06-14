@@ -1,9 +1,14 @@
-import { useEffect } from 'react'
-import { useFormik } from 'formik'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useMutation } from '@apollo/client'
+import { useFormik } from 'formik'
+import slugify from 'slugify'
+import Swal from 'sweetalert2'
+
+import client from '../../config/apollo'
+import { REGISTER } from '../../queries/authQueries'
 import { signUpInit } from '../../utils/formInit'
 import LayoutAccess from '../../components/Layout/LayoutAccess'
-import Icon from '../../components/Icon'
 import {
   form,
   form__container,
@@ -14,11 +19,36 @@ import {
 import FormGroup from '../../components/FormGroup'
 
 const SignUp = () => {
+  const router = useRouter()
+  //user register mutation
+  const [createUser] = useMutation(REGISTER)
+
   const formik = useFormik({
     ...signUpInit,
-    onSubmit: (values) => {
-      //TODO: login con el backend
-      console.log(values)
+    onSubmit: async () => {
+      try {
+        Swal.showLoading()
+        const slug = slugify(username)
+        const { data } = await createUser({
+          variables: {
+            input: {
+              username,
+              jobTitle,
+              email,
+              password,
+              slug,
+            },
+          },
+        })
+
+        localStorage.setItem('token', data.createUser.token)
+        await client.resetStore()
+        Swal.close()
+
+        router.replace('/')
+      } catch ({ message }) {
+        Swal.fire('error', message, 'error')
+      }
     },
   })
 
@@ -90,7 +120,11 @@ const SignUp = () => {
             error={errors.password2}
             touched={touched.password2}
           />
-          <button className={`${form__button} btn`} type="submit">
+          <button
+            className={`${form__button} btn`}
+            type="submit"
+            disabled={loading}
+          >
             Sign up
           </button>
 

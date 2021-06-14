@@ -22,11 +22,10 @@ const FormGroup = ({
     <>
       <div
         className={`${form__control__group} ${
-          // prettier-ignore
-          (error && touched) && form__control__group_error
+          error && touched && form__control__group_error
         }`}
       >
-        <Icon className={form__icon} href={icon} />
+        {icon && <Icon className={form__icon} href={icon} />}
         <input
           className={form__input}
           id={id}
@@ -38,10 +37,7 @@ const FormGroup = ({
         />
       </div>
 
-      {
-        // prettier-ignore
-        (touched && error) && <FormAlert error={error} />
-      }
+      {touched && error && <FormAlert error={error} />}
     </>
   )
 }
