@@ -1,8 +1,10 @@
 import { useContext } from 'react'
 import { useRouter } from 'next/router'
 import { AuthContext } from '../../auth/AuthContext'
+import { AdminProvider } from '../../context/AdminContext'
 import LayoutAdmin from '../../components/Layout/LayoutAdmin'
 import NavAdmin from '../../components/Layout/NavAdmin'
+import Dashboard from '../../components/editor/Dashboard'
 
 const Admin = () => {
   const router = useRouter()
@@ -17,9 +19,12 @@ const Admin = () => {
   }
 
   return (
-    <LayoutAdmin>
-      <NavAdmin />
-    </LayoutAdmin>
+    <AdminProvider>
+      <LayoutAdmin>
+        <NavAdmin />
+        <Dashboard />
+      </LayoutAdmin>
+    </AdminProvider>
   )
 }
 

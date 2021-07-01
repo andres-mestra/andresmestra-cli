@@ -35,7 +35,7 @@ const Login = () => {
         await client.resetStore()
         Swal.close()
 
-        router.replace('/admin')
+        router.replace('/')
       } catch ({ message }) {
         Swal.fire('error', message, 'error')
       }

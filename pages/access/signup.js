@@ -21,7 +21,7 @@ import FormGroup from '../../components/FormGroup'
 const SignUp = () => {
   const router = useRouter()
   //user register mutation
-  const [createUser] = useMutation(REGISTER)
+  const [createUser, { loading }] = useMutation(REGISTER)
 
   const formik = useFormik({
     ...signUpInit,
@@ -42,6 +42,8 @@ const SignUp = () => {
         })
 
         localStorage.setItem('token', data.createUser.token)
+        //restaura el estado del cliente de apollo
+        //para poder leer el nuevo token e incluirlo en los headers
         await client.resetStore()
         Swal.close()
 

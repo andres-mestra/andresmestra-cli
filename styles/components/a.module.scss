@@ -1,0 +1,17 @@
+.a {
+  &_btn {
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+
+    &_green {
+      background-color: var(--green);
+      color: var(--white);
+
+      &:hover {
+        background-color: var(--green-light-1);
+      }
+    }
+  }
+}

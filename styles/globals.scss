@@ -1,7 +1,9 @@
 //COLOR VARIABLES
 :root {
+  --purple: #ad26b4;
   --blue-light-1: #3fb0ef;
   --blue-ligh-2: #50b6ed;
+  --grey-ligth: #f8fafc;
   --grey-dark: #f2f4f7;
   --grey-dark-1: #e8f0fe;
   --grey-dark-2: #d6e3eb;
@@ -9,7 +11,12 @@
   --white: #ffffff;
   --black: #000000;
   --black-1: #343f44;
+  --black-2: #738a94;
   --red: #ff4d4f;
+  --green: #afd455;
+  --green-light-1: #b3dd49;
+
+  --border-grey: 1px solid var(--grey-dark-1);
 }
 
 *,
@@ -31,8 +38,18 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 a {
   color: inherit;
+  cursor: pointer;
   text-decoration: none;
   &:hover,
   &:focus,
