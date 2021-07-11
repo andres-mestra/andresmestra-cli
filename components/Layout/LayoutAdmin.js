@@ -1,7 +1,10 @@
+import NavAdmin from '../../components/Layout/NavAdmin'
+
 const LayoutAdmin = ({ children }) => {
   return (
-    <>
-      <main className="container">{children}</main>
+    <main className="container">
+      <NavAdmin />
+      {children}
       <style jsx>{`
         .container {
           display: grid;
@@ -9,7 +12,7 @@ const LayoutAdmin = ({ children }) => {
           grid-template-rows: 100vh;
         }
       `}</style>
-    </>
+    </main>
   )
 }
 

@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-const ALLPOSTS = gql`
+export const ALLPOSTS = gql`
   query allPosts($paginate: principalPagInput, $pagcategories: simplePagInput) {
     allPosts(paginate: $paginate) {
       id
@@ -17,7 +17,7 @@ const ALLPOSTS = gql`
     }
   }
 `
-const AllCATEGORIES = gql`
+export const AllCATEGORIES = gql`
   query allCategories($paginate: principalPagInput) {
     allCategories(paginate: $paginate) {
       name
@@ -28,10 +28,3 @@ const AllCATEGORIES = gql`
     }
   }
 `
-
-const editorQueries = {
-  posts: ALLPOSTS,
-  tags: AllCATEGORIES,
-}
-
-export default editorQueries

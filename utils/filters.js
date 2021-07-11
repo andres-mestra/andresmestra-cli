@@ -1,4 +1,4 @@
-const posts = {
+export const paginatePosts = {
   paginate: {
     take: 5,
     orderBy: {
@@ -18,8 +18,4 @@ const posts = {
       ['Sort by Create rev', { createdAt: 'asc' }],
     ],
   },
-}
-
-export default {
-  posts,
 }

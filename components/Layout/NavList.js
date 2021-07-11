@@ -5,7 +5,7 @@ import {
 } from '../../styles/layout/navList.module.scss'
 import NavListItem from './NavListItem'
 
-const NavList = ({ title, items, active, setActive }) => {
+const NavList = ({ title, items }) => {
   return (
     <div className={navList}>
       <div className={navList__title}>
@@ -13,14 +13,7 @@ const NavList = ({ title, items, active, setActive }) => {
       </div>
       <ul className={navList__items}>
         {items.map((item) => {
-          return (
-            <NavListItem
-              item={item}
-              key={item.text}
-              active={active}
-              setActive={setActive}
-            />
-          )
+          return <NavListItem item={item} key={item.text} />
         })}
       </ul>
     </div>

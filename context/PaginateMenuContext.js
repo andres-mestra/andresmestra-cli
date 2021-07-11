@@ -1,4 +1,12 @@
-import {
+import React from 'react'
+
+const PaginateMenuContext = () => {
+  return <div></div>
+}
+
+export default PaginateMenuContext
+
+/* import {
   createContext,
   useCallback,
   useContext,
@@ -6,14 +14,11 @@ import {
   useState,
 } from 'react'
 import { AdminContext } from './AdminContext'
-import paginateState from '../utils/paginateState'
+import paginateState from '../utils/paginations'
 
 export const PaginateMenuContext = createContext()
 
 export const PaginateMenuProvider = ({ children }) => {
-  const {
-    editorNav: { active },
-  } = useContext(AdminContext)
   const [paginateMenu, setPaginateMenu] = useState(paginateState[active.text])
 
   const paginatePosts = useCallback(
@@ -23,15 +28,15 @@ export const PaginateMenuProvider = ({ children }) => {
         if (value === null) {
           delete paginate[type]
           return {
-            paginate,
-            menus,
+            paginate: { ...paginate },
+            menus: { ...menus },
           }
         }
 
         paginate[type] = value
         return {
-          paginate,
-          menus,
+          paginate: { ...paginate },
+          menus: { ...menus },
         }
       })
     },
@@ -48,3 +53,4 @@ export const PaginateMenuProvider = ({ children }) => {
     </PaginateMenuContext.Provider>
   )
 }
+ */

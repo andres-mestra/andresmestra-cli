@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { filter__item } from '../../styles/components/editor/contentPag.module.scss'
+import { filter__item } from '../styles/contentPag.module.scss'
 
 const ContentFilterItem = memo(({ text, handleClick }) => {
   return (

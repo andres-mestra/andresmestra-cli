@@ -2,7 +2,7 @@ import ContentFilterItem from './ContentFilterItem'
 import {
   filter__dropdowm_active,
   filter__menu,
-} from '../../styles/components/editor/contentPag.module.scss'
+} from '../styles/contentPag.module.scss'
 const ContentFilterList = ({ options, handleClick }) => {
   return (
     <div className={filter__dropdowm_active}>

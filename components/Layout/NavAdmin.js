@@ -1,8 +1,6 @@
-import { useContext } from 'react'
-import { AdminContext } from '../../context/AdminContext'
-
 import Logo from '../Logo'
 import NavList from './NavList'
+import { MenuEditor } from '../../utils/menus'
 import {
   nav,
   nav__header,
@@ -10,7 +8,6 @@ import {
 } from '../../styles/layout/NavAdmin.module.scss'
 
 const NavAdmin = () => {
-  const { editorNav, setEditorNav } = useContext(AdminContext)
   return (
     <nav className={nav}>
       <header className={nav__header}>
@@ -19,12 +16,7 @@ const NavAdmin = () => {
         </div>
       </header>
       <section className={nav__body}>
-        <NavList
-          title={editorNav.title}
-          items={editorNav.items}
-          active={editorNav.active}
-          setActive={setEditorNav}
-        />
+        <NavList title={MenuEditor.title} items={MenuEditor.items} />
       </section>
     </nav>
   )
