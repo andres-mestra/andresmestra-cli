@@ -1,0 +1,19 @@
+.pagination {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: var(--shadow);
+  }
+
+  &__button {
+    background-color: var(--white);
+    padding: 0.7rem;
+    width: 100%;
+  }
+
+  &__icon {
+    fill: currentColor;
+    height: 2rem;
+    width: 2rem;
+  }
+}

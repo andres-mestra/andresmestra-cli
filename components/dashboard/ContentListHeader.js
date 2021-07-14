@@ -1,4 +1,4 @@
-import { list__header } from '../../styles/components/editor/contentList.module.scss'
+import { list__header } from '../../styles/components/dashboard/contentList.module.scss'
 
 const ContentListHeader = ({ titles }) => {
   return (

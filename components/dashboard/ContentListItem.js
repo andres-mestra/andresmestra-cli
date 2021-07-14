@@ -10,7 +10,7 @@ import {
   list__item__category,
   list__item__tag_purple,
   list__item__tag,
-} from '../../styles/components/editor/contentList.module.scss'
+} from '../../styles/components/dashboard/contentList.module.scss'
 
 const ContentListItem = ({
   id,

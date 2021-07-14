@@ -2,7 +2,7 @@
   background-color: var(--white);
   border-radius: 5px;
   border: var(--border-grey);
-  box-shadow: 0px 0px 2px var(--grey-dark-2);
+  box-shadow: var(--shadow);
   display: grid;
   overflow: hidden;
 }
@@ -19,6 +19,8 @@
 }
 
 .list__item {
+  animation: var(--dropdownAnimateSlow);
+
   &:not(:last-child) {
     border-bottom: var(--border-grey);
   }
@@ -72,5 +74,19 @@
       color: var(--purple);
       background-color: rgba(173, 38, 180, 0.2);
     }
+  }
+}
+
+@keyframes dropdownAnimate {
+  0% {
+    display: block;
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+    transform: translateY(0);
+    opacity: 1;
   }
 }

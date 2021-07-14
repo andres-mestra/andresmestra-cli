@@ -1,6 +1,6 @@
 export const paginatePosts = {
   paginate: {
-    take: 5,
+    take: 3,
     orderBy: {
       createdAt: 'desc',
     },

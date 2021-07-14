@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { useRouter } from 'next/router'
 import { AuthContext } from '../../auth/AuthContext'
-//import Dashboard from '../../components/editor/Dashboard'
 
 const Admin = () => {
   const router = useRouter()
