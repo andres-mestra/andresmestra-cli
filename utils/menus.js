@@ -7,7 +7,7 @@ export const MenuEditor = {
       //head: ['title', 'status', 'last update'],
     },
     {
-      text: 'tags',
+      text: 'categories',
       icon: 'icon-bookmark',
       //head: ['tag', 'slug', 'no. of posts'],
     },

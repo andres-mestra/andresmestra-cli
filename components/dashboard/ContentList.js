@@ -11,7 +11,9 @@ const ContentList = ({ headList, items, loading, error }) => {
       <ContentListHeader titles={headList} />
       <ol>
         {items &&
-          items.map((item) => <ContentListItem key={item.id} {...item} />)}
+          items.map((item) => (
+            <ContentListItem key={item?.id || item?.slug} {...item} />
+          ))}
       </ol>
     </section>
   )

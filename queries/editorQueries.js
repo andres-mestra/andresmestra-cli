@@ -20,6 +20,7 @@ export const ALLPOSTS = gql`
 export const AllCATEGORIES = gql`
   query allCategories($paginate: principalPagInput) {
     allCategories(paginate: $paginate) {
+      id
       name
       slug
       _count {

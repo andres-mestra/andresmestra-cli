@@ -75,18 +75,8 @@
       background-color: rgba(173, 38, 180, 0.2);
     }
   }
-}
 
-@keyframes dropdownAnimate {
-  0% {
-    display: block;
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-
-  100% {
-    display: none;
-    transform: translateY(0);
-    opacity: 1;
+  &__count {
+    color: var(--blue-light-1);
   }
 }

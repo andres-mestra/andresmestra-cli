@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import Link from 'next/link'
+import Badge from '../Badge'
 import { dateShort } from '../../helpers/dateFormat'
 import {
   list__item,
@@ -10,6 +11,7 @@ import {
   list__item__category,
   list__item__tag_purple,
   list__item__tag,
+  list__item__count,
 } from '../../styles/components/dashboard/contentList.module.scss'
 
 const ContentListItem = ({
@@ -33,7 +35,7 @@ const ContentListItem = ({
 
   return (
     <li className={list__item}>
-      <Link href={`/admin/${type}/${id}`}>
+      <Link href={`/admin/${type}/${slug || id}`}>
         <a>
           <div className={list__item__info}>
             <h3 className={list__item__title}>{title || name}</h3>
@@ -53,19 +55,19 @@ const ContentListItem = ({
           <div>
             {published !== undefined &&
               (published ? (
-                <span className={list__item__tag}>published</span>
+                <Badge text="published" type="published" />
               ) : (
-                <span
-                  className={`${list__item__tag} ${list__item__tag_purple}`}
-                >
-                  draft
-                </span>
+                <Badge text="draft" type="draft" />
               ))}
             {slug && <span>{slug}</span>}
           </div>
           <div>
             {updatedAt && <span>{memoDate}</span>}
-            {_count && <span>{`${_count[count]} ${count}`}</span>}
+            {_count && (
+              <span
+                className={list__item__count}
+              >{`${_count[count]} ${count}`}</span>
+            )}
           </div>
         </a>
       </Link>

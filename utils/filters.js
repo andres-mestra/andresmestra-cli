@@ -1,6 +1,6 @@
 export const paginatePosts = {
   paginate: {
-    take: 3,
+    take: 5,
     orderBy: {
       createdAt: 'desc',
     },
@@ -17,5 +17,14 @@ export const paginatePosts = {
       ['Sort by Update rev', { updatedAt: 'asc' }],
       ['Sort by Create rev', { createdAt: 'asc' }],
     ],
+  },
+}
+
+export const paginateCategories = {
+  paginate: {
+    take: 5,
+    orderBy: {
+      id: 'desc',
+    },
   },
 }
