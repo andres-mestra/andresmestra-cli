@@ -2,7 +2,7 @@ const Badge = ({ text, type }) => {
   return (
     <>
       <span className={`badge ${type ?? 'badge_border'}`}>{text}</span>
-
+      {/*TODO:Falta el editor en el estilo*/}
       <style jsx>{`
         .badge {
           background-color: var(--white);
@@ -12,6 +12,8 @@ const Badge = ({ text, type }) => {
           font-size: 1.2rem;
           padding: 0.2rem 0.3rem;
           text-transform: uppercase;
+          height: max-content;
+          width: max-content;
         }
 
         .badge_border {
@@ -32,6 +34,10 @@ const Badge = ({ text, type }) => {
           color: var(--white);
           background: var(--black);
           font-weight: 600;
+        }
+
+        .normal {
+          border: var(--border-grey);
         }
       `}</style>
     </>

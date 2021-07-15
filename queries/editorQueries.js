@@ -29,3 +29,16 @@ export const AllCATEGORIES = gql`
     }
   }
 `
+
+export const ALLUSERS = gql`
+  query allUsers {
+    allUsers {
+      id
+      username
+      email
+      slug
+      role
+      avatar
+    }
+  }
+`

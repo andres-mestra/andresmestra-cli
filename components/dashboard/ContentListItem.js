@@ -9,8 +9,6 @@ import {
   list__item__subinfo,
   list__item__author,
   list__item__category,
-  list__item__tag_purple,
-  list__item__tag,
   list__item__count,
 } from '../../styles/components/dashboard/contentList.module.scss'
 
