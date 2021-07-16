@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import Link from 'next/link'
 import Badge from '../Badge'
+import ContentListTags from './ContentListTags'
 import { dateShort } from '../../helpers/dateFormat'
 import {
   list__item,
@@ -26,7 +27,7 @@ const ContentListItem = ({
 }) => {
   const type = __typename.toLowerCase()
   const count = _count ? Object.keys(_count).pop() : null
-  const category = categories?.length ? categories[0].name : null
+  const tags = categories?.length && categories.map(({ name }) => name)
   const memoDate = useMemo(() => {
     return dateShort(updatedAt)
   })
@@ -43,11 +44,10 @@ const ContentListItem = ({
                   By<span>{author.username}</span>
                 </p>
               )}
-              {category && (
-                <p className={list__item__category}>
-                  In<span>{category}</span>
-                </p>
-              )}
+              <p className={list__item__category}>
+                In
+                {tags && <ContentListTags list={tags} />}
+              </p>
             </div>
           </div>
           <div>
