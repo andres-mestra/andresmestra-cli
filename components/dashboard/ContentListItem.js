@@ -45,8 +45,11 @@ const ContentListItem = ({
                 </p>
               )}
               <p className={list__item__category}>
-                In
-                {tags && <ContentListTags list={tags} />}
+                {tags && (
+                  <>
+                    In <ContentListTags list={tags} />
+                  </>
+                )}
               </p>
             </div>
           </div>

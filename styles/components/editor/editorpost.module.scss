@@ -1,0 +1,64 @@
+.editor {
+  &__container {
+    padding: 2rem;
+    height: 100vh;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    height: 5rem;
+  }
+
+  &__return {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: var(--blue-light-1);
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+
+    &_icon {
+      fill: currentColor;
+      margin-right: 0.5rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+
+  &__status {
+    border-left: var(--border-light);
+    color: var(--grey-dark-3);
+    padding-left: 1rem;
+  }
+
+  &__title {
+    height: max-content;
+    width: 100%;
+
+    &_textarea {
+      border: none;
+      font-size: 4.3rem;
+      font-weight: 600;
+      flex: 1 1 auto;
+      line-height: 1.15em;
+      resize: none;
+      overflow: hidden;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: var(--black-2);
+      }
+    }
+  }
+}
