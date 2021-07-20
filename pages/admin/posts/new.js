@@ -7,6 +7,7 @@ import EditorTitle from '../../../components/editor/EditorTitle'
 
 import 'react-markdown-editor-lite/lib/index.css'
 import { editor__container } from '../../../styles/components/editor/editorpost.module.scss'
+import SettingsMenu from '../../../components/settings/SettingsMenu'
 
 const MdEditor = dynamic(() => import('react-markdown-editor-lite'), {
   ssr: false,
@@ -28,6 +29,7 @@ const NewPost = () => {
   return (
     <div className={editor__container}>
       <EditorHeader text="posts" status="Draft" url="/admin/posts" />
+      <SettingsMenu />
       <EditorTitle title={'(Untitled)'} />
       <MdEditor
         style={{ height: '500px' }}
