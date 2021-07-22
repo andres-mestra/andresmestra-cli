@@ -5,10 +5,13 @@
   padding: 1.5rem;
   position: absolute;
   display: grid;
+  grid-auto-rows: max-content;
   grid-row-gap: 1rem;
   right: 0;
   top: 0;
+  height: 100vh;
   width: 32rem;
+  overflow-y: scroll;
   z-index: 9;
 }
 
@@ -40,6 +43,12 @@
     border-radius: 3px;
     padding: 0.8rem;
     display: flex;
+    align-items: center;
+    width: 100%;
+
+    &_wrap {
+      flex-wrap: wrap;
+    }
   }
 
   //TODO: fala el estilo del group enfocado
@@ -56,6 +65,14 @@
     outline: none;
     padding: 0 1rem;
     width: 100%;
+  }
+
+  &__textarea {
+    border: none;
+    outline: none;
+    min-height: 8rem;
+    width: 100%;
+    resize: vertical;
   }
 
   &__image {
@@ -77,6 +94,32 @@
       cursor: pointer;
       font-size: 1.3rem;
       padding: 0.8rem;
+    }
+  }
+
+  &__group &__badge:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  &__badge {
+    background-color: var(--blue-light-1);
+    border-radius: 3px;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.3rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    align-items: center;
+
+    &_icon {
+      fill: currentColor;
+      margin-left: 0.4rem;
+      height: 1.5rem;
+      width: 1.5rem;
     }
   }
 }

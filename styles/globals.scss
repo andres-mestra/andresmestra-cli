@@ -42,7 +42,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-
+ul,
+ol {
+  list-style: none;
+}
 
 button {
   cursor: pointer;

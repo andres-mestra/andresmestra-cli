@@ -9,7 +9,7 @@ import {
 } from '../../styles/components/editor/editorpost.module.scss'
 
 const EditorHeader = ({ text, status, url }) => {
-  console.log(url)
+  //TODO:integrar mostrar menu de settings
   return (
     <header className={editor__header}>
       <div className={editor__return}>

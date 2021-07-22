@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {
   setting__subtitle,
   setting__group,
@@ -8,6 +7,7 @@ import {
 import Icon from '../Icon'
 
 const SettingsSlug = () => {
+  //TODO: función para generar slug
   return (
     <div>
       <p className={setting__subtitle}>URL</p>

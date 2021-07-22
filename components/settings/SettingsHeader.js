@@ -5,6 +5,7 @@ import {
   setting__close_icon,
 } from '../../styles/components/settingsMenu.module.scss'
 const SettingsHeader = () => {
+  //TODO: función para ocultar menu
   return (
     <div className={setting__header}>
       <h2>Settings</h2>
