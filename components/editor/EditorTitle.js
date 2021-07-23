@@ -1,24 +1,22 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { PostsContext } from '../../context/PostsContext'
 import {
   editor__title,
   editor__title_textarea,
 } from '../../styles/components/editor/editorpost.module.scss'
 
-const EditorTitle = ({ title }) => {
-  const [value, setvalue] = useState(title)
-  const handleChange = ({ target }) => {
-    setvalue(target.value)
-    console.log(target.value)
-  }
+const EditorTitle = () => {
+  const { post, actions } = useContext(PostsContext)
 
   return (
     <section className={editor__title}>
       <textarea
+        id="title"
         className={editor__title_textarea}
         type="text"
         placeholder="Post title"
-        value={value}
-        onChange={handleChange}
+        value={post.title}
+        onChange={actions.handleChange}
       />
     </section>
   )

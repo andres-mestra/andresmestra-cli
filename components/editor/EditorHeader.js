@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { PostsContext } from '../../context/PostsContext'
+
 import Link from 'next/link'
 import Icon from '../Icon'
 import {
@@ -6,10 +9,14 @@ import {
   editor__link,
   editor__link_icon,
   editor__status,
+  editor__action,
+  editor__setting,
+  editor__setting_icon,
 } from '../../styles/components/editor/editorpost.module.scss'
 
 const EditorHeader = ({ text, status, url }) => {
-  //TODO:integrar mostrar menu de settings
+  const { setShowSettings } = useContext(PostsContext)
+
   return (
     <header className={editor__header}>
       <div className={editor__return}>
@@ -23,6 +30,17 @@ const EditorHeader = ({ text, status, url }) => {
           </a>
         </Link>
         <span className={editor__status}>{status}</span>
+      </div>
+      <div className={editor__action}>
+        <button
+          className={`btn ${editor__setting}`}
+          onClick={() => setShowSettings(true)}
+        >
+          <Icon
+            className={editor__setting_icon}
+            href={'/images/sprite.svg#icon-list'}
+          />
+        </button>
       </div>
     </header>
   )

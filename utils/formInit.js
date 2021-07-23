@@ -31,3 +31,14 @@ export const loginInit = {
     password: Yup.string().required('Password requerido'),
   }),
 }
+
+export const postInit = {
+  initialValues: {
+    title: '',
+    html: '',
+    markdown: '',
+    slug: '',
+    published: false,
+    categories: [],
+  },
+}

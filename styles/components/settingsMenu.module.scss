@@ -4,6 +4,7 @@
   font-size: 1.2rem;
   padding: 1.5rem;
   position: absolute;
+  visibility: hidden;
   display: grid;
   grid-auto-rows: max-content;
   grid-row-gap: 1rem;
@@ -16,6 +17,15 @@
 }
 
 .setting {
+  &__show {
+    visibility: visible;
+    animation: showMenuAnimate 0.2s;
+  }
+
+  &__hidden {
+    animation: hiddenMenuAnimate 0.2s;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -121,5 +131,27 @@
       height: 1.5rem;
       width: 1.5rem;
     }
+  }
+}
+
+@keyframes showMenuAnimate {
+  0% {
+    transform: translateX(30rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hiddenMenuAnimate {
+  0% {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateX(30rem);
   }
 }
