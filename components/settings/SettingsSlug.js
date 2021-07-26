@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react'
-import { PostsContext } from '../../context/PostsContext'
+import { usePost } from '../../hooks/usePost'
 import { slugCreate } from '../../helpers/slugCreate'
 import {
   setting__subtitle,
@@ -10,7 +9,7 @@ import {
 import Icon from '../Icon'
 
 const SettingsSlug = () => {
-  const { post, actions } = useContext(PostsContext)
+  const { post, actions } = usePost()
 
   const handleBlur = (e) => {
     const { value } = e.target

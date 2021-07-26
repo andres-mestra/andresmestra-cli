@@ -1,5 +1,4 @@
-import { useContext } from 'react'
-import { PostsContext } from '../../context/PostsContext'
+import { usePost } from '../../hooks/usePost'
 import Icon from '../Icon'
 import {
   setting__header,
@@ -7,7 +6,7 @@ import {
   setting__close_icon,
 } from '../../styles/components/settingsMenu.module.scss'
 const SettingsHeader = () => {
-  const { setShowSettings } = useContext(PostsContext)
+  const { setShowSettings } = usePost()
 
   return (
     <div className={setting__header}>

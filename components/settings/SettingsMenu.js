@@ -1,5 +1,4 @@
-import { useContext } from 'react'
-import { PostsContext } from '../../context/PostsContext'
+import { usePost } from '../../hooks/usePost'
 import SettingsHeader from './SettingsHeader'
 import SettingsImage from './SettingsImage'
 import SettingsSlug from './SettingsSlug'
@@ -12,7 +11,7 @@ import {
   setting__hidden,
 } from '../../styles/components/settingsMenu.module.scss'
 const SettingsMenu = () => {
-  const { showSettings } = useContext(PostsContext)
+  const { showSettings } = usePost()
 
   return (
     <div

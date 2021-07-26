@@ -1,8 +1,8 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
+import { usePost } from '../../hooks/usePost'
 import { useMutation } from '@apollo/client'
 import { insertCategory } from '../../queries/editorQueries'
 import { slugCreate } from '../../helpers/slugCreate'
-import { PostsContext } from '../../context/PostsContext'
 import { unique } from '../../helpers/tools'
 import SettingsBadge from './SettingsBadge'
 
@@ -15,7 +15,7 @@ import {
 
 const SettingsTags = () => {
   const [tag, setTag] = useState('')
-  const { post, actions } = useContext(PostsContext)
+  const { post, actions } = usePost()
   const [addCategory] = useMutation(insertCategory)
 
   const handleChange = (e) => {

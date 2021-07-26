@@ -1,12 +1,11 @@
-import { useContext } from 'react'
-import { PostsContext } from '../../context/PostsContext'
+import { usePost } from '../../hooks/usePost'
 import {
   setting__subtitle,
   setting__group,
   setting__textarea,
 } from '../../styles/components/settingsMenu.module.scss'
 const SettingsDescription = () => {
-  const { post, actions } = useContext(PostsContext)
+  const { post, actions } = usePost()
 
   return (
     <div>

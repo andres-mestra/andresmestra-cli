@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react'
-import { PostsContext } from '../../context/PostsContext'
+import { usePost } from '../../hooks/usePost'
 import { slugCreate } from '../../helpers/slugCreate'
 import {
   editor__title,
@@ -7,12 +6,12 @@ import {
 } from '../../styles/components/editor/editorpost.module.scss'
 
 const EditorTitle = () => {
-  const { post, actions } = useContext(PostsContext)
+  const { post, actions } = usePost()
   const handleChange = (e) => {
     const { value } = e.target
     actions.setValues((values) => ({
       ...values,
-      title: value.trim(),
+      title: value,
       slug: slugCreate(value),
     }))
   }

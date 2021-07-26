@@ -1,6 +1,4 @@
-import { useContext } from 'react'
-import { PostsContext } from '../../context/PostsContext'
-
+import { usePost } from '../../hooks/usePost'
 import Link from 'next/link'
 import Icon from '../Icon'
 import {
@@ -15,7 +13,7 @@ import {
 } from '../../styles/components/editor/editorpost.module.scss'
 
 const EditorHeader = ({ text, status, url }) => {
-  const { setShowSettings } = useContext(PostsContext)
+  const { setShowSettings } = usePost()
 
   return (
     <header className={editor__header}>
