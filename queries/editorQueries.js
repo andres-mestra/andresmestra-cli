@@ -42,3 +42,15 @@ export const ALLUSERS = gql`
     }
   }
 `
+
+export const insertCategory = gql`
+  mutation insertCategory($input: CategoryInput!) {
+    insertCategory(input: $input) {
+      category {
+        id
+        name
+      }
+      insert
+    }
+  }
+`

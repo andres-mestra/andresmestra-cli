@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react'
 import { PostsContext } from '../../context/PostsContext'
+import { slugCreate } from '../../helpers/slugCreate'
 import {
   setting__subtitle,
   setting__group,
@@ -10,11 +11,15 @@ import Icon from '../Icon'
 
 const SettingsSlug = () => {
   const { post, actions } = useContext(PostsContext)
-  const [url, setUrl] = useState('')
-  const handleChange = (e) => {
-    //TODO: add slug al context ( actions.handleChange )
+
+  const handleBlur = (e) => {
+    const { value } = e.target
+    actions.setValues((values) => ({
+      ...values,
+      slug: slugCreate(value),
+    }))
   }
-  //TODO: función para generar slug
+
   return (
     <div>
       <p className={setting__subtitle}>URL</p>
@@ -25,6 +30,7 @@ const SettingsSlug = () => {
           className={setting__input}
           value={post.slug}
           onChange={actions.handleChange}
+          onBlur={handleBlur}
         />
       </div>
     </div>

@@ -38,7 +38,12 @@ export const postInit = {
     html: '',
     markdown: '',
     slug: '',
+    description: '',
     published: false,
     categories: [],
   },
+  validationSchema: Yup.object({
+    title: Yup.string().required('Title requerio'),
+    categories: Yup.array(),
+  }),
 }

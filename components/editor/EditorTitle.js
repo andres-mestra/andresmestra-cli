@@ -1,5 +1,6 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { PostsContext } from '../../context/PostsContext'
+import { slugCreate } from '../../helpers/slugCreate'
 import {
   editor__title,
   editor__title_textarea,
@@ -7,6 +8,14 @@ import {
 
 const EditorTitle = () => {
   const { post, actions } = useContext(PostsContext)
+  const handleChange = (e) => {
+    const { value } = e.target
+    actions.setValues((values) => ({
+      ...values,
+      title: value.trim(),
+      slug: slugCreate(value),
+    }))
+  }
 
   return (
     <section className={editor__title}>
@@ -16,7 +25,7 @@ const EditorTitle = () => {
         type="text"
         placeholder="Post title"
         value={post.title}
-        onChange={actions.handleChange}
+        onChange={handleChange}
       />
     </section>
   )
