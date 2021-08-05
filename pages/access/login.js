@@ -45,7 +45,7 @@ const Login = () => {
   const { email, password } = formik.values
   const { errors } = formik
   const { touched } = formik
-
+  //TODO: if logined redirect to home
   return (
     <LayoutAccess>
       <div className={form__container}>

@@ -87,11 +87,12 @@
 
   &__image {
     background-color: var(--white);
-    height: 13rem;
+    height: 14rem;
     border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     input {
       display: none;
@@ -104,6 +105,10 @@
       cursor: pointer;
       font-size: 1.3rem;
       padding: 0.8rem;
+    }
+
+    img {
+      width: 100%;
     }
   }
 

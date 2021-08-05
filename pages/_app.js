@@ -2,12 +2,13 @@ import client from '../config/apollo'
 import { ApolloProvider } from '@apollo/client'
 import { AuthProvider } from '../auth/AuthContext'
 import LayoutAdmin from '../components/Layout/LayoutAdmin'
+import PublicLayout from '../components/ui/PublicLayout'
 
 import '../styles/globals.scss'
 
 const layouts = {
   ADMIN: LayoutAdmin,
-  PUBLIC: ({ children }) => <>{children}</>,
+  PUBLIC: PublicLayout,
 }
 
 function MyApp({ Component, pageProps }) {

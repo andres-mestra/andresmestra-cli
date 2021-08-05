@@ -1,5 +1,19 @@
 //COLOR VARIABLES
 :root {
+  --color-text: hsl(0, 0%, 10%);
+  --color-text-acc-1: hsl(0, 0%, 20%);
+  --color-text-acc-2: hsl(0, 0%, 30%);
+  --color-text-acc-3: hsl(0, 0%, 40%);
+  --color-text-reverse: hsl(0, 0%, 90%);
+  --color-bg-body: hsl(219, 23%, 97%);
+  --color-bg: hsl(0, 100%, 100%);
+  --color-bg-acc-1: hsl(0, 0%, 98%);
+  --color-bg-acc-2: hsl(0, 0%, 96%);
+  --color-bg-acc-3: hsl(0, 0%, 94%);
+  --color-bg-reverse: hsl(0, 0%, 10%);
+  --color-neutral: hsl(0, 0%, 50%);
+  --color-border: hsl(0, 0%, 95%);
+
   --purple: #ad26b4;
   --blue-light-1: #3fb0ef;
   --blue-ligh-2: #50b6ed;
@@ -37,6 +51,7 @@ html {
 }
 
 body {
+  background-color: var(--color-bg-body);
   line-height: 1.6;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
