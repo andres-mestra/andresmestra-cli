@@ -1,25 +1,23 @@
 import { TitleMedium } from '../text/TitleMedium'
 import { CardTecnology } from '../ui/cards/CardTecnology'
 
-export const Professional = () => {
+import { tecnologies } from '../../utils/tecnologies'
+
+const keyTenologies = Object.keys(tecnologies)
+
+export const Habilities = () => {
   return (
     <>
-      <section className="professional" id="conocimiento">
-        <TitleMedium>Profesional en</TitleMedium>
-        {/*TODO: realizar con una lista*/}
+      <section className="habilities" id="habilities">
+        <TitleMedium>Habilidades</TitleMedium>
         <div className="container_cards">
-          <CardTecnology name="html" />
-          <CardTecnology name="css" />
-          <CardTecnology name="javascript" />
-          <CardTecnology name="apollographql" />
-          <CardTecnology name="html" />
-          <CardTecnology name="css" />
-          <CardTecnology name="javascript" />
-          <CardTecnology name="apollographql" />
+          {keyTenologies.map((name) => (
+            <CardTecnology key={name} name={name} />
+          ))}
         </div>
       </section>
       <style jsx>{`
-        .professional {
+        .habilities {
           padding: 5rem 0;
           grid-column: center-start / center-end;
           text-align: center;

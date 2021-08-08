@@ -17,52 +17,30 @@ export const CardTecnology = ({
   return (
     <>
       <div className="card__tecnology">
-        <figure className="card__icon">
-          <img
-            width="45"
-            height="45"
-            src={tecnology.logo}
-            alt={tecnology.name}
-          />
-        </figure>
+        <svg className="card__icon">
+          <use xlinkHref={tecnology.logo}></use>
+        </svg>
         <div className="card__content">
           <h3 className="card__title">{tecnology.name}</h3>
           {tecnology?.description && (
             <p className="card__description">{tecnology.description}</p>
           )}
         </div>
-        <span className="card__line"></span>
       </div>
       <style jsx>{`
         .card__tecnology {
-          padding: 0.5rem;
-          display: grid;
-          grid-template-columns: min-content 1fr;
-          grid-column-gap: 2rem;
-          align-items: center;
-          position: relative;
-        }
-
-        .card__line {
           background-image: linear-gradient(to right bottom, ${gradient});
-          position: absolute;
-          bottom: -9px;
-          height: 1.5px;
-          width: 100%;
+          padding: 1rem;
+          display: grid;
+          grid-template-columns: min-content max-content;
+          place-content: center;
+          grid-column-gap: 1rem;
         }
 
         .card__icon {
-          background-image: linear-gradient(to right bottom, ${gradient});
-          border-radius: 100%;
-          display: flex;
-          padding: 1.5rem;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .card__icon img {
-          object-fit: cover;
-          object-position: center;
+          fill: var(--white);
+          height: 5rem;
+          width: 5rem;
         }
 
         .card__content {
