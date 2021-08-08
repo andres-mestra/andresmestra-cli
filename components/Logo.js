@@ -1,11 +1,11 @@
-const Logo = () => {
+const Logo = ({ height }) => {
   return (
     <>
-      <img className="logo" src="/vercel.svg" />
+      <img className="logo" src="/logo-3.png" />
       <style jsx>{`
         .logo {
           fill: #000;
-          height: 100%;
+          height: ${height || '100%'};
         }
       `}</style>
     </>

@@ -1,5 +1,13 @@
 //COLOR VARIABLES
 :root {
+  --color-primary: #2f4858;
+  --color-secundary: #ff4d4f;
+  --color-thertiary: #6b5695;
+
+  --color-palett-1: #3b537c;
+  --color-palett-2: #a84f97;
+  --color-palett-3: #df437e;
+
   --color-text: hsl(0, 0%, 10%);
   --color-text-acc-1: hsl(0, 0%, 20%);
   --color-text-acc-2: hsl(0, 0%, 30%);
@@ -75,6 +83,16 @@ a {
   &:active {
     text-decoration: none;
   }
+}
+
+.container_grid {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start]
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 .btn {

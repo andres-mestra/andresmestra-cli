@@ -2,7 +2,7 @@ import client from '../config/apollo'
 import { ApolloProvider } from '@apollo/client'
 import { AuthProvider } from '../auth/AuthContext'
 import LayoutAdmin from '../components/Layout/LayoutAdmin'
-import PublicLayout from '../components/ui/PublicLayout'
+import PublicLayout from '../components/Layout/PublicLayout'
 
 import '../styles/globals.scss'
 
