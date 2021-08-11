@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { navigationList } from '../../utils/navigationsList'
 
 export const NavBar = () => {
   return (
@@ -6,21 +7,13 @@ export const NavBar = () => {
       <nav>
         {/*TODO: realizar con una lista que contenga las rutas y text del link*/}
         <ul>
-          <li>
-            <Link href="/">
-              <a>home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>blog</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>about</a>
-            </Link>
-          </li>
+          {navigationList.map(({ text, route }) => (
+            <li key={text}>
+              <Link href={route}>
+                <a>{text}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <style jsx>{`

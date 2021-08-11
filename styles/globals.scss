@@ -87,7 +87,6 @@ a {
 
 .container_grid {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr)
     [center-start]

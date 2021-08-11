@@ -6,7 +6,7 @@ import { Habilities } from '../components/me/Habilities'
 const Home = () => {
   return (
     <>
-      <main className="container_grid">
+      <main className="home">
         <HeaderMe />
         <Habilities />
         {/* <div>Tecnologias</div>
@@ -14,6 +14,12 @@ const Home = () => {
         <div>Proyectos</div>
         <div>Contacto</div> */}
       </main>
+      <style jsx>{`
+        .home {
+          display: grid;
+          grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+        }
+      `}</style>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import client from '../config/apollo'
 import { ApolloProvider } from '@apollo/client'
-import { AuthProvider } from '../auth/AuthContext'
+
 import LayoutAdmin from '../components/Layout/LayoutAdmin'
 import PublicLayout from '../components/Layout/PublicLayout'
 
@@ -12,14 +12,13 @@ const layouts = {
 }
 
 function MyApp({ Component, pageProps }) {
-  const Layout = layouts[Component?.layout] || layouts.PUBLIC
+  const Layout =
+    layouts[Component?.layout] || (({ children }) => <>{children}</>)
   return (
     <ApolloProvider client={client}>
-      <AuthProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </AuthProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ApolloProvider>
   )
 }

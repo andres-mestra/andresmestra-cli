@@ -1,22 +1,28 @@
-import { TitleMedium } from '../text/TitleMedium'
 import { CardTecnology } from '../ui/cards/CardTecnology'
 
 import { tecnologies } from '../../utils/tecnologies'
+import { HeaderLarge } from '../ui/headers/HeaderLarge'
 
 const keyTenologies = Object.keys(tecnologies)
 
 export const Habilities = () => {
   return (
     <>
-      <section className="habilities" id="habilities">
-        <TitleMedium>Habilidades</TitleMedium>
-        <div className="container_cards">
-          {keyTenologies.map((name) => (
-            <CardTecnology key={name} name={name} />
-          ))}
+      <section className="container_grid" id="habilidades">
+        <div className="habilities">
+          <HeaderLarge title="Habilidades" />
+          <div className="container_cards">
+            {keyTenologies.map((name) => (
+              <CardTecnology key={name} name={name} />
+            ))}
+          </div>
         </div>
       </section>
       <style jsx>{`
+        #habilidades {
+          background-color: var(--white);
+        }
+
         .habilities {
           padding: 5rem 0;
           grid-column: center-start / center-end;

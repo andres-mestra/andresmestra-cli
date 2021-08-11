@@ -19,4 +19,5 @@ const NewPost = () => {
   )
 }
 
+NewPost.layout = 'ADMIN'
 export default NewPost

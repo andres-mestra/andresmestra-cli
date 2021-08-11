@@ -1,5 +1,7 @@
 import { createContext } from 'react'
 import { useQuery } from '@apollo/client'
+import { useRouter, withRouter } from 'next/router'
+
 import { ME } from '../queries/authQueries'
 
 /* {
@@ -16,11 +18,19 @@ import { ME } from '../queries/authQueries'
 export const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
-  const { data, loading, error } = useQuery(ME)
-  const auth = data?.me ? { ...data.me } : null
+  const router = useRouter()
+  const { loading, error, data } = useQuery(ME)
+  const auth = data?.me ?? false
+
+  if (loading) return <p>loading...</p>
+
+  if (!auth || error?.message) {
+    router.replace('/')
+    return <p>Redirecting...</p>
+  }
 
   return (
-    <AuthContext.Provider value={{ loading, error, auth }}>
+    <AuthContext.Provider value={{ auth, loading, error }}>
       {children}
     </AuthContext.Provider>
   )

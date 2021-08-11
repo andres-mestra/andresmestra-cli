@@ -4,10 +4,13 @@ import { Presentation } from './Presentation'
 
 export const HeaderMe = () => {
   return (
-    <div className="header__me">
-      <Presentation />
-      <Perfil />
-
+    <>
+      <section className="container_grid">
+        <div className="header__me">
+          <Presentation />
+          <Perfil />
+        </div>
+      </section>
       <style jsx>{`
         .header__me {
           background-image: linear-gradient(
@@ -24,6 +27,6 @@ export const HeaderMe = () => {
           grid-auto-flow: column;
         }
       `}</style>
-    </div>
+    </>
   )
 }
