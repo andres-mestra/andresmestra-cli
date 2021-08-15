@@ -1,11 +1,5 @@
 import Link from 'next/link'
-
-const types = {
-  red: {
-    background: '--color-secundary',
-    color: '--white',
-  },
-}
+import sty from '../../../helpers/styles/StyleButton'
 
 const text_transform = {
   none: 'none',
@@ -14,27 +8,21 @@ const text_transform = {
   capitalize: 'capitalize',
 }
 
-export const LinkSecundary = ({ type, transform, children, href = '/' }) => {
-  const { color, background } = types[type] ?? types.red
-
+export const LinkSecundary = ({ transform, children, href = '/' }) => {
   return (
     <>
       <Link href={href}>
-        <a>{children}</a>
+        <a className={sty.btn}>{children}</a>
       </Link>
       <style jsx>{`
         a {
-          background-color: var(${background});
+          background-color: var(--color-secundary);
           border-radius: 3rem;
-          color: var(${color});
+          color: var(--white);
           font-size: 1.3rem;
           padding: 0.5rem 1.5rem;
           width: max-content;
           text-transform: ${text_transform[transform] ?? text_transform.none};
-        }
-
-        a:active {
-          transform: scale(0.95);
         }
       `}</style>
     </>
