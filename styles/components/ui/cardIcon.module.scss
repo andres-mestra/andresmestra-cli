@@ -1,0 +1,16 @@
+.card_icon {
+  color: var(--color-palett-1);
+  font-size: 1.7rem;
+  font-weight: 600;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 2.5rem;
+  align-items: center;
+  width: max-content;
+
+  &__figure {
+    fill: var(--color-palett-3);
+    height: 3rem;
+    width: 3rem;
+  }
+}

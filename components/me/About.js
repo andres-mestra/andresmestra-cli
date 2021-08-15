@@ -3,6 +3,7 @@ import { Description } from '../text/Description'
 
 import { HeaderLarge } from '../ui/headers/HeaderLarge'
 import { Contacts } from './Contacts'
+import { Interests } from './Interests'
 
 export const About = () => {
   return (
@@ -22,15 +23,18 @@ export const About = () => {
             pariatur.
           </Description>
           <Contacts />
+          <Interests />
         </div>
       </section>
       <style jsx>{`
         .about {
-          background-color: var(--color-bg-body);
+          background-color: var(--white);
           margin: 5rem;
           padding: 5rem;
           grid-column: col-start 2 / col-end 7;
           position: relative;
+          display: grid;
+          grid-row-gap: 2rem;
         }
 
         .about::after {
@@ -47,6 +51,10 @@ export const About = () => {
 
         .about__header {
           text-align: center;
+        }
+
+        .about__description {
+          margin-bottom: 3rem;
         }
       `}</style>
     </>
