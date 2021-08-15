@@ -31,7 +31,7 @@ export const About = () => {
           background-color: var(--white);
           margin: 5rem;
           padding: 5rem;
-          grid-column: col-start 2 / col-end 7;
+          grid-column: center-start / center-end;
           position: relative;
           display: grid;
           grid-row-gap: 2rem;
@@ -39,7 +39,7 @@ export const About = () => {
 
         .about::after {
           content: '';
-          background-color: var(--color-secundary);
+          background-color: var(--color-palett-1);
           clip-path: polygon(0 0, 30% 0, 100% 70%, 100% 100%, 70% 100%, 0 30%);
           position: absolute;
           top: -0.3em;

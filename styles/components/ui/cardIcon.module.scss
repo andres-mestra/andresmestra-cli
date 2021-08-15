@@ -2,6 +2,7 @@
   color: var(--color-palett-1);
   font-size: 1.7rem;
   font-weight: 600;
+  text-transform: capitalize;
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 2.5rem;
@@ -10,7 +11,7 @@
 
   &__figure {
     fill: var(--color-palett-3);
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
   }
 }
