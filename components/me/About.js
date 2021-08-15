@@ -27,9 +27,11 @@ export const About = () => {
         </div>
       </section>
       <style jsx>{`
+        #about {
+          padding: 5rem 0;
+        }
         .about {
           background-color: var(--white);
-          margin: 5rem;
           padding: 5rem;
           grid-column: center-start / center-end;
           position: relative;

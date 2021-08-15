@@ -20,11 +20,10 @@ export const Habilities = () => {
       </section>
       <style jsx>{`
         #habilities {
-          background-color: var(--white);
+          padding-bottom: 5rem;
         }
 
         .habilities {
-          padding: 5rem 0;
           grid-column: center-start / center-end;
           text-align: center;
         }
