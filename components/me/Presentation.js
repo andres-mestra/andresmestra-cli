@@ -2,7 +2,7 @@ import { Description } from '../text/Description'
 import { TitleLarge } from '../text/TitleLarge'
 import { TitleMedium } from '../text/TitleMedium'
 import { TitleSmall } from '../text/TitleSmall'
-import { ButtonLink } from '../ui/ButtonLink'
+import { LinkSecundary } from '../ui/buttons/LinkSecundary'
 
 export const Presentation = () => {
   return (
@@ -10,7 +10,7 @@ export const Presentation = () => {
       <section id="home" className="presentation">
         <TitleSmall color="var(--color-secundary)">Hola, soy</TitleSmall>
         <TitleLarge>Andres Mestra</TitleLarge>
-        <TitleMedium>Front-end Developer</TitleMedium>
+        <TitleMedium>Junior Front-end Developer</TitleMedium>
         {/*TODO: Cambiar esta presentación*/}
         <Description>
           Sponsored by Frontend Masters, advancing your skills with in-depth,
@@ -18,9 +18,9 @@ export const Presentation = () => {
         </Description>
 
         <div className="presentation__links">
-          <ButtonLink href="#contact" transform="uppercase">
+          <LinkSecundary href="#contact" transform="uppercase">
             Contáctame
-          </ButtonLink>
+          </LinkSecundary>
         </div>
       </section>
       <style jsx>{`

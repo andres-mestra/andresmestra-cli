@@ -1,5 +1,6 @@
 export const navigationList = [
-  { text: 'home', route: '/' },
-  { text: 'habilidades', route: '/#habilidades' },
-  { text: 'admin', route: '/admin' },
+  { text: 'Home', route: '/', to: 'home' },
+  { text: 'About', route: '/#about', to: 'about' },
+  { text: 'Habilities', route: '/#habilities', to: 'habilities' },
+  { text: 'admin', route: '/admin', to: 'admin' },
 ]

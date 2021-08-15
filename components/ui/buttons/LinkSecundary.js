@@ -14,7 +14,7 @@ const text_transform = {
   capitalize: 'capitalize',
 }
 
-export const ButtonLink = ({ type, transform, children, href = '/' }) => {
+export const LinkSecundary = ({ type, transform, children, href = '/' }) => {
   const { color, background } = types[type] ?? types.red
 
   return (

@@ -8,7 +8,7 @@ const keyTenologies = Object.keys(tecnologies)
 export const Habilities = () => {
   return (
     <>
-      <section className="container_grid" id="habilidades">
+      <section className="container_grid" id="habilities">
         <div className="habilities">
           <HeaderLarge title="Habilidades" />
           <div className="container_cards">
@@ -19,7 +19,7 @@ export const Habilities = () => {
         </div>
       </section>
       <style jsx>{`
-        #habilidades {
+        #habilities {
           background-color: var(--white);
         }
 
