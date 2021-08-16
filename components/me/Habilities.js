@@ -2,39 +2,21 @@ import { CardTecnology } from '../ui/cards/CardTecnology'
 
 import { tecnologies } from '../../utils/tecnologies'
 import { HeaderLarge } from '../ui/headers/HeaderLarge'
-
 const keyTenologies = Object.keys(tecnologies)
+
+import sty from '../../styles/components/me/habilities.module.scss'
 
 export const Habilities = () => {
   return (
-    <>
-      <section className="container_grid" id="habilities">
-        <div className="habilities">
-          <HeaderLarge title="Habilidades" />
-          <div className="container_cards">
-            {keyTenologies.map((name) => (
-              <CardTecnology key={name} name={name} />
-            ))}
-          </div>
+    <section className="container_grid" id="habilities">
+      <div className={sty.habilities}>
+        <HeaderLarge title="Habilidades" />
+        <div className={sty.container_cards}>
+          {keyTenologies.map((name) => (
+            <CardTecnology key={name} name={name} />
+          ))}
         </div>
-      </section>
-      <style jsx>{`
-        #habilities {
-          padding-bottom: 5rem;
-        }
-
-        .habilities {
-          grid-column: center-start / center-end;
-          text-align: center;
-        }
-
-        .container_cards {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-          grid-column-gap: 2rem;
-          grid-row-gap: 4rem;
-        }
-      `}</style>
-    </>
+      </div>
+    </section>
   )
 }

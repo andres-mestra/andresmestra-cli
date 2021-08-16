@@ -1,0 +1,20 @@
+@import '../../mixins';
+
+.habilities {
+  grid-column: center-start / center-end;
+  text-align: center;
+}
+
+.container_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+}
+
+@include bpMedium() {
+  .container_cards {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-row-gap: 2rem;
+  }
+}
