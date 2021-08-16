@@ -1,0 +1,18 @@
+@import '../../mixins';
+
+.about {
+  background-color: var(--white);
+  padding: 5rem;
+  grid-column: center-start / center-end;
+  display: grid;
+
+  &_header {
+    text-align: center;
+  }
+}
+
+@include bpMedium() {
+  .about {
+    padding: 3rem 0;
+  }
+}
