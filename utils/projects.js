@@ -4,8 +4,7 @@ export const projects = [
     github: 'https://github.com/andres-mestra/nexter',
     url: 'https://andres-mestra.github.io/nexter/',
     image: 'images/projects/nexter.png',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+    description: 'Web inmobiliaria implementando Grid Layout',
   },
   {
     name: 'natours',
@@ -13,7 +12,7 @@ export const projects = [
     url: 'https://andres-mestra.github.io/natours/',
     image: 'images/projects/natours.png',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+      'Tours que te conectan con la naturaleza, layout basado en floats',
   },
   {
     name: 'trillo',
@@ -21,6 +20,6 @@ export const projects = [
     url: 'https://andres-mestra.github.io/trillo/',
     image: 'images/projects/trillo.png',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+      'Pagina wed de calificación y recomendaciones de hoteles; implementando layout basado en Flexbox',
   },
 ]
