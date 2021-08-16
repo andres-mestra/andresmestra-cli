@@ -1,0 +1,24 @@
+@import '../../mixins';
+
+.projects {
+  &_header {
+    grid-column: center-start / center-end;
+    padding-top: 3rem;
+    text-align: center;
+  }
+
+  &_content {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+  }
+}
+
+@include bpMedium() {
+  .projects {
+    &_content {
+      grid-gap: 3rem;
+    }
+  }
+}
