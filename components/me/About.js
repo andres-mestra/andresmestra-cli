@@ -36,19 +36,6 @@ export const About = () => {
           grid-column: center-start / center-end;
           position: relative;
           display: grid;
-          grid-row-gap: 2rem;
-        }
-
-        .about::after {
-          content: '';
-          background-color: var(--color-palett-1);
-          clip-path: polygon(0 0, 30% 0, 100% 70%, 100% 100%, 70% 100%, 0 30%);
-          position: absolute;
-          top: -0.3em;
-          left: -0.3em;
-          right: -0.3em;
-          bottom: -0.3em;
-          z-index: -1;
         }
 
         .about__header {

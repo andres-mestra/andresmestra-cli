@@ -1,9 +1,12 @@
 import { CardProject } from '../ui/cards/CardProject'
+import { HeaderLarge } from '../ui/headers/HeaderLarge'
 const projects = ['1p', '2p', '3p,', '4p', '5p', '6p']
 export const Projects = () => {
-  console.log(projects)
   return (
     <section className="container_grid" id="projects">
+      <div className="projects_header">
+        <HeaderLarge title="Proyectos" />
+      </div>
       <div className="projects_content">
         {projects.map((project, index) => (
           <CardProject key={index} />
@@ -12,6 +15,11 @@ export const Projects = () => {
       <style jsx>{`
         #projects {
           padding: 5rem 0;
+        }
+
+        .projects_header {
+          grid-column: center-start / center-end;
+          text-align: center;
         }
 
         .projects_content {

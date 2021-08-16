@@ -1,37 +1,36 @@
 export const CardProject = () => {
   return (
     <>
-      <a href="#" target="_blank">
-        <div className="project">
-          <img className="project_image" src="images/test_project.png" />
-          <h4 className="project_title">Nexter</h4>
-          <p className="project_description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
-          </p>
+      <div className="project">
+        <img className="project_image" src="images/test_project.png" />
+        <h4 className="project_title">Nexter</h4>
+        <p className="project_description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor
+        </p>
 
-          <a
-            href="https://www.google.com"
-            target="_blank"
-            className="project_link"
-          >
-            <svg className="project_icon">
-              <use xlinkHref="images/sprite.svg#icon-github"></use>
-            </svg>
-            <span>Github</span>
-          </a>
+        <a
+          href="https://www.google.com"
+          target="_blank"
+          className="project_link"
+        >
+          <svg className="project_icon">
+            <use xlinkHref="images/sprite.svg#icon-github"></use>
+          </svg>
+          <span>Github</span>
+        </a>
 
-          <a
-            href="https://www.google.com"
-            target="_blank"
-            className="project_link project_view"
-          >
-            <svg className="project_icon">
-              <use xlinkHref="images/sprite.svg#icon-new-tab"></use>
-            </svg>
-          </a>
-        </div>
-      </a>
+        <a
+          href="https://www.google.com/#"
+          target="_blank"
+          className="project_view"
+        >
+          <svg className="project_icon">
+            <use xlinkHref="images/sprite.svg#icon-new-tab"></use>
+          </svg>
+        </a>
+      </div>
+
       <style jsx>{`
         .project {
           box-shadow: 0px 0px 5px var(--grey-dark-2);
@@ -67,7 +66,8 @@ export const CardProject = () => {
           padding: 0 2rem;
         }
 
-        .project_link {
+        .project_link,
+        .project_view {
           padding: 2rem;
           padding-top: 0;
           display: grid;
