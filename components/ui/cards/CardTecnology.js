@@ -39,8 +39,8 @@ export const CardTecnology = ({
 
         .card__icon {
           fill: var(--white);
-          height: 5rem;
-          width: 5rem;
+          height: 4rem;
+          width: 4rem;
         }
 
         .card__content {

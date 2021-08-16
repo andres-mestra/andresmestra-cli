@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { HeaderMe } from '../components/me/HeaderMe'
 import { Habilities } from '../components/me/Habilities'
 import { About } from '../components/me/About'
+import { Projects } from '../components/me/Projects'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <HeaderMe />
         <About />
         <Habilities />
+        <Projects />
         {/* <div>Tecnologias</div>
         <div>About me</div>
         <div>Proyectos</div>
