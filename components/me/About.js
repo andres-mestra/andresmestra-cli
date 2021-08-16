@@ -34,7 +34,6 @@ export const About = () => {
           background-color: var(--white);
           padding: 5rem;
           grid-column: center-start / center-end;
-          position: relative;
           display: grid;
         }
 
