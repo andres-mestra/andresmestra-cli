@@ -1,6 +1,7 @@
 import { CardProject } from '../ui/cards/CardProject'
 import { HeaderLarge } from '../ui/headers/HeaderLarge'
-const projects = ['1p', '2p', '3p,', '4p', '5p', '6p']
+import { projects } from '../../utils/projects'
+
 export const Projects = () => {
   return (
     <section className="container_grid" id="projects">
@@ -8,8 +9,8 @@ export const Projects = () => {
         <HeaderLarge title="Proyectos" />
       </div>
       <div className="projects_content">
-        {projects.map((project, index) => (
-          <CardProject key={index} />
+        {projects.map((project) => (
+          <CardProject key={project.name} {...project} />
         ))}
       </div>
       <style jsx>{`

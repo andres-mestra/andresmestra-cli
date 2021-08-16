@@ -1,30 +1,19 @@
-export const CardProject = () => {
+export const CardProject = ({ image, name, description, github, url }) => {
   return (
     <>
       <div className="project">
-        <img className="project_image" src="images/test_project.png" />
-        <h4 className="project_title">Nexter</h4>
-        <p className="project_description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor
-        </p>
+        <img className="project_image" src={image} />
+        <h4 className="project_title">{name}</h4>
+        <p className="project_description">{description}</p>
 
-        <a
-          href="https://www.google.com"
-          target="_blank"
-          className="project_link"
-        >
+        <a href={github} target="_blank" className="project_link">
           <svg className="project_icon">
             <use xlinkHref="images/sprite.svg#icon-github"></use>
           </svg>
           <span>Github</span>
         </a>
 
-        <a
-          href="https://www.google.com/#"
-          target="_blank"
-          className="project_view"
-        >
+        <a href={url} target="_blank" className="project_view">
           <svg className="project_icon">
             <use xlinkHref="images/sprite.svg#icon-new-tab"></use>
           </svg>
@@ -56,6 +45,7 @@ export const CardProject = () => {
           font-size: 1.6rem;
           font-weight: 300;
           text-align: center;
+          text-transform: capitalize;
           padding: 0.3rem;
           transform: translateY(50%);
           width: 80%;
