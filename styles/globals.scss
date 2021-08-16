@@ -1,3 +1,5 @@
+@import './mixins';
+
 //COLOR VARIABLES
 :root {
   --color-primary: #2f4858;
@@ -115,5 +117,11 @@ a {
     display: none;
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@include bpMedium() {
+  html {
+    font-size: 50%;
   }
 }

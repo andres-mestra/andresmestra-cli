@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin bpMedium() {
+  @media only screen and (max-width: 46.87rem) {
+    @content;
+  }
+}

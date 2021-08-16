@@ -1,0 +1,12 @@
+@import '../mixins';
+
+.home {
+  display: grid;
+  grid-template-rows: 80vh min-content max-content repeat(3, min-content);
+}
+
+@include bpMedium() {
+  .home {
+    grid-template-rows: 60rem min-content max-content repeat(3, min-content);
+  }
+}

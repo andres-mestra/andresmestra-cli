@@ -1,23 +1,31 @@
-@import "../../mixins";
+@import '../../mixins';
 
 .header_me {
-  background-image: linear-gradient(
-    to left top,
-    #e7e9ed,
-    #ecedf0,
-    #f1f2f4,
-    #f6f6f7,
-    #fbfbfb
+  background-image: radial-gradient(
+    circle,
+    #ffffff,
+    #f9f9fa,
+    #f3f4f6,
+    #edeef1,
+    #e7e9ed
   );
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: column;
-
 }
 
 @include bpLarge() {
-  .header_me{
+  .header_me {
     grid-column: full-start / full-end;
+  }
+}
+
+@include bpMedium() {
+  .header_me {
+    grid-column: full-start / full-end;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35rem 25rem;
+    grid-auto-flow: row;
   }
 }

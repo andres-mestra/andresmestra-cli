@@ -5,6 +5,8 @@ import { Habilities } from '../components/me/Habilities'
 import { About } from '../components/me/About'
 import { Projects } from '../components/me/Projects'
 
+import sty from '../styles/pages/home.module.scss'
+
 const Home = () => {
   return (
     <>
@@ -12,7 +14,7 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Andre Mestra</title>
       </Head>
-      <main className="home">
+      <main className={sty.home}>
         <HeaderMe />
         <About />
         <Habilities />
@@ -22,15 +24,6 @@ const Home = () => {
         <div>Proyectos</div>
         <div>Contacto</div> */}
       </main>
-      <style jsx>{`
-        .home {
-          display: grid;
-          grid-template-rows: 80vh min-content max-content repeat(
-              3,
-              min-content
-            );
-        }
-      `}</style>
     </>
   )
 }

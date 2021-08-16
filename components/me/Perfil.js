@@ -1,17 +1,10 @@
+import sty from '../../styles/components/me/perfil.module.scss'
+
 export const Perfil = () => {
   return (
     <section
-      className="perfil"
+      className={sty.perfil}
       style={{ backgroundImage: 'url(images/perfil.png)' }}
-    >
-      <style jsx>{`
-        .perfil {
-          background-size: cover;
-          background-position: top;
-          height: 100%;
-          width: 100%;
-        }
-      `}</style>
-    </section>
+    ></section>
   )
 }

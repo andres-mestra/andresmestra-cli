@@ -1,0 +1,22 @@
+@import '../../mixins';
+
+.presentation {
+  padding: 5rem;
+  display: grid;
+  align-content: center;
+  grid-auto-rows: min-content;
+  grid-row-gap: 0.5rem;
+  height: 100%;
+
+  &__links {
+    display: flex;
+    margin-top: 2rem;
+  }
+}
+
+@include bpMedium() {
+  .presentation {
+    padding: 3rem;
+    background-image: none;
+  }
+}
