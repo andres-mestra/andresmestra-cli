@@ -1,3 +1,5 @@
+@import '../../mixins';
+
 .form {
   &_contact {
     padding: 4rem 0;
@@ -14,8 +16,8 @@
   &_container {
     background-image: linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0.95) 0%,
-        rgba(255, 255, 255, 0.95) 65%,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 65%,
         transparent 65%
       ),
       url(../../../public/images/contact_medium.jpg);
@@ -29,6 +31,24 @@
       align-content: center;
       grid-row-gap: 1.5rem;
       width: 60%;
+    }
+  }
+}
+
+@include bpMedium() {
+  .form {
+    &_container {
+      background-image: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(255, 255, 255, 0.95) 100%
+        ),
+        url(../../../public/images/contact_medium.jpg);
+      grid-column: center-start / center-end;
+
+      form {
+        width: 100%;
+      }
     }
   }
 }
