@@ -1,0 +1,34 @@
+.form {
+  &_contact {
+    padding: 4rem 0;
+    background-image: linear-gradient(
+      to right bottom,
+      #3b537c,
+      #345173,
+      #304e6a,
+      #2f4b61,
+      #2f4858
+    );
+  }
+
+  &_container {
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.95) 65%,
+        transparent 65%
+      ),
+      url(../../../public/images/contact_medium.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column: col-start 2 / col-end 7;
+    padding: 3rem;
+
+    form {
+      display: grid;
+      align-content: center;
+      grid-row-gap: 1.5rem;
+      width: 60%;
+    }
+  }
+}
