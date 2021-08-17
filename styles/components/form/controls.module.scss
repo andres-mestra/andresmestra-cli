@@ -1,0 +1,33 @@
+.form {
+  &_label {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  &_group {
+    font-size: 1.5rem;
+    display: grid;
+    grid-row-gap: 1rem;
+  }
+
+  &_input,
+  &_textarea {
+    border: var(--border-light);
+    border-radius: var(--border-round);
+    outline: none;
+    padding: 1rem;
+  }
+
+  &_input,
+  &_textarea {
+    &:focus {
+      border: var(--border-dark-grey);
+      box-shadow: var(--shadow-2);
+    }
+  }
+
+  &_textarea {
+    resize: none;
+    height: 15rem;
+  }
+}

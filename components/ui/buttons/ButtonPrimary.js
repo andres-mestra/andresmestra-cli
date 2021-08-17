@@ -10,7 +10,8 @@ export const ButtonPrimary = ({ text, type }) => {
           background-color: var(--color-primary);
           border: none;
           border-radius: 3rem;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
+          text-transform: uppercase;
           padding: 0.5rem 1.5rem;
           width: max-content;
         }

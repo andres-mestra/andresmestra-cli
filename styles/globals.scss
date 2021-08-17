@@ -41,8 +41,12 @@
   --green-light-1: #b3dd49;
 
   --border-grey: 1px solid var(--grey-dark-1);
+  --border-dark-grey: 1px solid var(--black-2);
   --border-light: 1px solid var(--grey-dark-2);
+
   --shadow: 0px 0px 2px var(--grey-dark-2);
+  --shadow-2: 1px 1px 2px var(--grey-dark-2);
+  --shadow-light: 0 1.5rem 4rem rgb(0 0 0 / 20%);
 
   --dropdownAnimateSlow: dropdownAnimate 0.8s;
 

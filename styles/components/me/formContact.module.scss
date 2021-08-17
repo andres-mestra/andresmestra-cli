@@ -5,11 +5,11 @@
     padding: 4rem 0;
     background-image: linear-gradient(
       to right bottom,
-      #3b537c,
-      #345173,
-      #304e6a,
-      #2f4b61,
-      #2f4858
+      #3468be,
+      #3663ad,
+      #375e9d,
+      #39588c,
+      #3b537c
     );
   }
 
@@ -23,6 +23,7 @@
       url(../../../public/images/contact_medium.jpg);
     background-size: cover;
     background-position: center;
+    box-shadow: var(--shadow-light);
     grid-column: col-start 2 / col-end 7;
     padding: 3rem;
 
