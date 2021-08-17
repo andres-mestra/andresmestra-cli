@@ -1,9 +1,11 @@
+//1000px
 @mixin bpLarge() {
   @media only screen and (max-width: 62.5rem) {
     @content;
   }
 }
 
+//750px
 @mixin bpMedium() {
   @media only screen and (max-width: 46.87rem) {
     @content;
