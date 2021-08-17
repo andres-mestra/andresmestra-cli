@@ -20,6 +20,6 @@ export const projects = [
     url: 'https://andres-mestra.github.io/trillo/',
     image: 'images/projects/trillo.png',
     description:
-      'Pagina wed de calificación y recomendaciones de hoteles; implementando layout basado en Flexbox',
+      'Pagina wed de calificación y recomendaciones de hoteles, implementando layout basado en Flexbox',
   },
 ]

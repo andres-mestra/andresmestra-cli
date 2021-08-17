@@ -42,8 +42,8 @@ export const CardProject = ({ image, name, description, github, url }) => {
           align-self: end;
           color: var(--white);
           background-color: var(--color-primary);
-          font-size: 1.6rem;
-          font-weight: 300;
+          font-size: 1.8rem;
+          font-weight: 500;
           text-align: center;
           text-transform: capitalize;
           padding: 0.3rem;
@@ -54,6 +54,9 @@ export const CardProject = ({ image, name, description, github, url }) => {
         .project_description {
           grid-column: 1 / -1;
           padding: 0 2rem;
+          text-align: justify;
+          hyphens: auto;
+          height: 8rem;
         }
 
         .project_link,
@@ -67,8 +70,8 @@ export const CardProject = ({ image, name, description, github, url }) => {
 
         .project_icon {
           fill: var(--color-primary);
-          height: 2rem;
-          width: 2rem;
+          height: 2.3rem;
+          width: 2.3rem;
         }
 
         .project_link span {
