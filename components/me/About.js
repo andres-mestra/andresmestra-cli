@@ -11,9 +11,7 @@ export const About = () => {
   return (
     <section className="container_grid" id="about">
       <div className={sty.about}>
-        <div className={sty.about_header}>
-          <HeaderLarge title="Sobre mí" />
-        </div>
+        <HeaderLarge title="Sobre mí" align="center" />
         {/*TODO: Cambiar descripción*/}
         <Description>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

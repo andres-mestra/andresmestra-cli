@@ -5,10 +5,7 @@ export const Header = () => {
   return (
     <>
       <header>
-        {/*TODO: Cambiar el logo*/}
-        <figure>
-          <Logo height={'6rem'} />
-        </figure>
+        <h2>AndresMestra</h2>
         <NavBar />
       </header>
 

@@ -18,9 +18,10 @@ export const Interests = () => {
       <style jsx>{`
         .interests_list {
           margin-top: 2rem;
-          display: flex;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
           justify-content: space-around;
-          flex-wrap: wrap;
+          grid-row-gap: 1rem;
         }
       `}</style>
     </>

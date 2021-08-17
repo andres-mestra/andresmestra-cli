@@ -1,11 +1,7 @@
 @import '../../mixins';
 
 .projects {
-  &_header {
-    grid-column: center-start / center-end;
-    padding-top: 3rem;
-    text-align: center;
-  }
+  padding: 4rem 0;
 
   &_content {
     grid-column: center-start / center-end;

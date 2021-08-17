@@ -6,14 +6,14 @@ import sty from '../../styles/components/me/projects.module.scss'
 
 export const Projects = () => {
   return (
-    <section className="container_grid" id="projects">
-      <div className={sty.projects_header}>
-        <HeaderLarge title="Proyectos" />
-      </div>
-      <div className={sty.projects_content}>
-        {projects.map((project) => (
-          <CardProject key={project.name} {...project} />
-        ))}
+    <section className={sty.projects} id="projects">
+      <HeaderLarge title="Proyectos" align="center" />
+      <div className="container_grid">
+        <div className={sty.projects_content}>
+          {projects.map((project) => (
+            <CardProject key={project.name} {...project} />
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -2,13 +2,9 @@
 
 .about {
   background-color: var(--white);
-  padding: 5rem;
+  padding: 4rem;
   grid-column: center-start / center-end;
   display: grid;
-
-  &_header {
-    text-align: center;
-  }
 }
 
 @include bpMedium() {
