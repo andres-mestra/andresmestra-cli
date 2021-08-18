@@ -11,3 +11,10 @@
     @content;
   }
 }
+
+//550px
+@mixin bpSmall() {
+  @media only screen and (max-width: 34.37rem) {
+    @content;
+  }
+}
