@@ -1,7 +1,9 @@
+@import '../mixins';
+
 .bar {
   background: var(--color-bg);
   box-shadow: var(--shadow-2);
-  display: flex;
+  display: none;
   align-items: center;
   padding: 0 1rem;
   position: fixed;
@@ -22,4 +24,10 @@
 .icon {
   height: 3.2rem;
   width: 3.2rem;
+}
+
+@include bpSmall() {
+  .bar {
+    display: grid;
+  }
 }
