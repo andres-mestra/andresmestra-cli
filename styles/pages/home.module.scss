@@ -5,3 +5,9 @@
   grid-template-rows: 60rem;
   grid-auto-rows: max-content;
 }
+
+@include bpSmall() {
+  .home {
+    margin-top: 5rem;
+  }
+}

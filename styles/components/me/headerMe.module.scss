@@ -29,3 +29,9 @@
     grid-auto-flow: row;
   }
 }
+
+@include bpSmall() {
+  .header_me {
+    grid-template-rows: 37rem 27rem;
+  }
+}
