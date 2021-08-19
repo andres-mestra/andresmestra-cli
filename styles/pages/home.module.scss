@@ -9,5 +9,6 @@
 @include bpSmall() {
   .home {
     margin-top: 5rem;
+    grid-template-rows: 66rem;
   }
 }
