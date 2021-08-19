@@ -47,6 +47,7 @@
 }
 
 .overlay {
+  display: none;
   background: rgba(0, 0, 0, 0.4);
   transform: scale(0);
   opacity: 0;
@@ -75,5 +76,9 @@
   .bar,
   .menu {
     display: grid;
+  }
+
+  .overlay {
+    display: block;
   }
 }
