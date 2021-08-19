@@ -14,12 +14,14 @@ export const About = () => {
         <HeaderLarge title="Sobre mí" align="center" />
         {/*TODO: Cambiar descripción*/}
         <Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          Estudiante de Química que le gusta programar para hacer de la vida una
+          experiencia más sencilla y práctica, siempre con el objetivo de
+          aprender y aplicar las mejores técnicas de desarrollo web, además he
+          implementado soluciones de RPA con el framework Robocorp para la
+          asignación y corrección de procesos en la compañía Tigo Colombia,
+          donde crecí como profesional en atención y fidelización de usuarios.
+          <br />
+          Orgulloso de ser colombiano.
         </Description>
         <Contacts />
         <Interests />

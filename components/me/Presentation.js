@@ -14,8 +14,9 @@ export const Presentation = () => {
       <TitleMedium>Junior Front-end Developer</TitleMedium>
       {/*TODO: Cambiar esta presentación*/}
       <Description>
-        Sponsored by Frontend Masters, advancing your skills with in-depth,
-        modern front-end engineering courses
+        Desarrollador web autodidacta desde hace 10 años, con mucha pasión por
+        seguir aprendiendo y en busca de su primera experiencia laboral como
+        front-end.
       </Description>
 
       <div className={sty.presentation__links}>
