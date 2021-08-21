@@ -1,7 +1,18 @@
 .btn {
+  border-radius: 3rem;
+  box-shadow: var(--shadow-2);
+  font-size: 1.4rem;
+  font-weight: bolder;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
   transition: all 0.2s;
+  width: max-content;
 
   &:active {
     transform: scale(0.95);
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 }

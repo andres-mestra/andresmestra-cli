@@ -3,6 +3,7 @@ import { TitleLarge } from '../text/TitleLarge'
 import { TitleMedium } from '../text/TitleMedium'
 import { TitleSmall } from '../text/TitleSmall'
 import { LinkSecundary } from '../ui/buttons/LinkSecundary'
+import { LinkSecundaryOutline } from '../ui/buttons/LinkSecundaryOutline'
 
 import sty from '../../styles/components/me/presentation.module.scss'
 
@@ -20,9 +21,18 @@ export const Presentation = () => {
       </Description>
 
       <div className={sty.presentation__links}>
-        <LinkSecundary href="#contact" transform="uppercase">
-          Contáctame
+        <LinkSecundary
+          href="https://www.linkedin.com/in/jhon-andres-mestra-tapias-aa2318203/"
+          target="_blank"
+        >
+          Contacto
         </LinkSecundary>
+        <LinkSecundaryOutline
+          href="CV/Jhon_Andres_Mestra_Tapias_Front_end_Web_Developer.pdf"
+          target="_blank"
+        >
+          Descargar CV
+        </LinkSecundaryOutline>
       </div>
     </section>
   )
