@@ -3,4 +3,5 @@ export const navigationList = [
   { text: 'About', route: '/#about', to: 'about' },
   { text: 'Habilities', route: '/#habilities', to: 'habilities' },
   { text: 'Projects', route: '/#projects', to: 'projects' },
+  { text: 'Contact', route: '/', to: 'home' },
 ]
