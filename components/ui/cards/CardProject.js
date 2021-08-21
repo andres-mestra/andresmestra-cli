@@ -22,6 +22,7 @@ export const CardProject = ({ image, name, description, github, url }) => {
 
       <style jsx>{`
         .project {
+          background-color: var(--white);
           box-shadow: 0px 0px 5px var(--grey-dark-2);
           display: grid;
           font-size: 1.3rem;
@@ -54,7 +55,7 @@ export const CardProject = ({ image, name, description, github, url }) => {
         .project_description {
           grid-column: 1 / -1;
           padding: 0 2rem;
-          text-align: justify;
+          text-align: left;
           hyphens: auto;
           height: 8rem;
         }
