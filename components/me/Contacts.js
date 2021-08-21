@@ -1,4 +1,3 @@
-import React from 'react'
 import { SocialContact } from './SocialContact'
 import { contactSocial } from '../../utils/contactSocial'
 

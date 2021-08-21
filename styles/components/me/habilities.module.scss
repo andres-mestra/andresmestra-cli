@@ -1,6 +1,7 @@
 @import '../../mixins';
 
 .habilities {
+  padding: 4rem 0;
   grid-column: center-start / center-end;
   text-align: center;
 }
@@ -10,6 +11,13 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 4rem;
+}
+
+@include bpLarge() {
+  .habilities {
+    grid-column: full-start / full-end;
+    padding: 4rem;
+  }
 }
 
 @include bpMedium() {

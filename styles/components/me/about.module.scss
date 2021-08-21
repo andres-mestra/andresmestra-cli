@@ -7,8 +7,9 @@
   display: grid;
 }
 
-@include bpMedium() {
+@include bpLarge() {
   .about {
-    padding: 3rem 0;
+    grid-column: full-start / full-end;
+    padding: 4rem;
   }
 }

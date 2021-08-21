@@ -4,7 +4,6 @@ import { HeaderMe } from '../components/me/HeaderMe'
 import { Habilities } from '../components/me/Habilities'
 import { About } from '../components/me/About'
 import { Projects } from '../components/me/Projects'
-import { FormContact } from '../components/me/FormContact'
 import sty from '../styles/pages/home.module.scss'
 
 const Home = () => {
@@ -19,11 +18,6 @@ const Home = () => {
         <About />
         <Habilities />
         <Projects />
-        <FormContact />
-        {/* <div>Tecnologias</div>
-        <div>About me</div>
-        <div>Proyectos</div>
-        <div>Contacto</div> */}
       </main>
     </>
   )
