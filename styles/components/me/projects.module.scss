@@ -25,3 +25,9 @@
     }
   }
 }
+
+@include bpSmall {
+  .projects {
+    padding: 4rem 2rem;
+  }
+}

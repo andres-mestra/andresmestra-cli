@@ -9,11 +9,10 @@ export const MovilBar = () => {
 
   return (
     <>
-      <div className={sty.bar}>
-        <button className={sty.button} onClick={handleActive}>
-          <Icon className={sty.icon} href="images/sprite.svg#icon-menu" />
-        </button>
-      </div>
+      <button className={sty.button} onClick={handleActive}>
+        <Icon className={sty.icon} href="images/sprite.svg#icon-menu" />
+      </button>
+
       <div className={`${sty.menu} ${active && sty.menu_view}`}>
         <MyName />
         <NavBar mobile={true} />

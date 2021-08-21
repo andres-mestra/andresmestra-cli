@@ -5,10 +5,3 @@
   grid-template-rows: minmax(max-content, 90vh);
   grid-auto-rows: repeat(2, minmax(max-content, 100vh));
 }
-
-@include bpSmall() {
-  .home {
-    margin-top: 5rem;
-    grid-template-rows: 66rem;
-  }
-}

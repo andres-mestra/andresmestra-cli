@@ -1,7 +1,7 @@
 @import '../../mixins';
 
 .presentation {
-  padding: 5rem;
+  padding: 4rem;
   display: grid;
   align-content: center;
   grid-auto-rows: min-content;
@@ -17,6 +17,11 @@
 @include bpMedium() {
   .presentation {
     padding: 3rem;
-    background-image: none;
+  }
+}
+
+@include bpSmall {
+  .presentation {
+    padding: 2rem;
   }
 }

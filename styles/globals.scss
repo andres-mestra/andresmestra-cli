@@ -167,3 +167,14 @@ p {
       [center-end] minmax(3rem, 1fr) [full-end];
   }
 }
+
+@include bpSmall {
+  .container_grid {
+    display: grid;
+    grid-template-columns:
+      [full-start] 2rem
+      [center-start]
+      repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] 2rem [full-end];
+  }
+}
