@@ -8,6 +8,13 @@ export const NavBar = ({ mobile }) => {
       {navigationList.map((route) => (
         <NavBarItem key={route?.text} mobile={mobile} {...route} />
       ))}
+      <a
+        className={sty.nav_bar__link}
+        href="https://www.linkedin.com/in/jhon-andres-mestra-tapias-aa2318203/"
+        target="_blank"
+      >
+        Contact
+      </a>
     </nav>
   )
 }
