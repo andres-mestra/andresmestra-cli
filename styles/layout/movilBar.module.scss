@@ -1,79 +1,109 @@
 @import '../mixins';
 
+.checkbox {
+  display: none;
+  // Funcionalidad
+  &:checked ~ .menu {
+    left: 0;
+  }
+
+  &:checked ~ .overlay {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+
 .button {
   background: var(--white);
-  border: none;
   border-radius: 50%;
   box-shadow: 0px 0px 5px var(--grey-dark-2);
-  padding: 1rem;
+  cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: fixed;
-  top: 10px;
-  right: 10px;
-  width: max-content;
+  top: 2rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
   visibility: hidden;
-  z-index: 9;
+  z-index: 99;
 }
 
 .icon {
-  height: 3.5rem;
-  width: 3.5rem;
+  position: relative;
+
+  &,
+  &::before,
+  &::after {
+    background-color: var(--black);
+    width: 3rem;
+    height: 2px;
+    display: inline-block;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    transition: all 0.2s;
+  }
+
+  &::before {
+    top: -0.8rem;
+  }
+
+  &::after {
+    top: 0.8rem;
+  }
+}
+
+.menu,
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
 
 .menu {
-  display: none;
   background-color: var(--color-bg);
   grid-template-columns: 100%;
   grid-template-rows: 10rem 1fr;
   align-items: start;
   grid-row-gap: 3rem;
   padding: 2rem;
-  transform: translateX(-100%);
-  height: 100vh;
+  left: -100%;
   width: 85%;
+  height: 100vh;
   z-index: 3;
-
-  &_view {
-    transform: translateX(0) !important;
-  }
 }
 
 .overlay {
-  display: none;
   background: rgba(0, 0, 0, 0.4);
-  transform: scale(0);
-  opacity: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-
-  &_view {
-    opacity: 1 !important;
-    transform: scale(1) !important;
-  }
-}
-
-.menu,
-.menu_view,
-.overlay,
-.overlay_view {
-  top: 0;
   left: 0;
-  bottom: 0;
-  position: fixed;
-  transition: all 0.3s ease-in-out 0s;
+  right: 0;
+  opacity: 0;
+  transform: scale(0);
+  width: 100vw;
+  z-index: 2;
 }
 
 @include bpSmall() {
   .button {
     visibility: visible;
   }
+
   .menu {
     display: grid;
   }
 
   .overlay {
     display: block;
+  }
+
+  .menu,
+  .overlay {
+    transition: all 0.3s;
   }
 }

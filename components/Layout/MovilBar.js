@@ -9,18 +9,20 @@ export const MovilBar = () => {
 
   return (
     <>
-      <button className={sty.button} onClick={handleActive}>
-        <Icon className={sty.icon} href="images/sprite.svg#icon-menu" />
-      </button>
-
-      <div className={`${sty.menu} ${active && sty.menu_view}`}>
+      <input
+        checked={active}
+        type="checkbox"
+        className={sty.checkbox}
+        id="nav-toggle"
+      />
+      <label onClick={handleActive} htmlFor="nav-toggle" className={sty.button}>
+        <span className={sty.icon}></span>
+      </label>
+      <div className={`${sty.menu}`}>
         <MyName />
         <NavBar mobile={true} />
       </div>
-      <div
-        onClick={handleActive}
-        className={`${sty.overlay} ${active && sty.overlay_view}`}
-      ></div>
+      <div onClick={handleActive} className={`${sty.overlay}`}></div>
     </>
   )
 }
