@@ -1,0 +1,15 @@
+.social {
+  &_link {
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+
+  &_icon {
+    fill: currentColor;
+    height: 4rem;
+    width: 4rem;
+  }
+}

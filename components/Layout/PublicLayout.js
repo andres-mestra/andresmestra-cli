@@ -1,6 +1,7 @@
+import { MenuProvider } from '../../context/MenuContext'
 import { Header } from './Header'
 import { MovilBar } from './MovilBar'
-import { MenuProvider } from '../../context/MenuContext'
+import { Footer } from './Footer'
 
 const PublicLayout = ({ children }) => {
   return (
@@ -9,6 +10,7 @@ const PublicLayout = ({ children }) => {
         <Header />
         <MovilBar />
         {children}
+        <Footer />
       </>
     </MenuProvider>
   )
