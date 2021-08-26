@@ -11,6 +11,20 @@
     opacity: 1;
     transform: scale(100%);
   }
+
+  &:checked + .button .icon {
+    background-color: transparent;
+  }
+
+  &:checked + .button .icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &:checked + .button .icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 }
 
 .button {
@@ -75,7 +89,7 @@
   padding: 2rem;
   left: -100%;
   width: 85%;
-  height: 100vh;
+  height: 100%;
   z-index: 3;
 }
 
@@ -85,7 +99,7 @@
   right: 0;
   opacity: 0;
   transform: scale(0);
-  width: 100vw;
+  width: 100%;
   z-index: 2;
 }
 

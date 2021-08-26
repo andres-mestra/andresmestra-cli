@@ -64,10 +64,10 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  color: var(--color-text);
 }
 
 body {
-  //background-color: var(--white);
   background-image: radial-gradient(
     circle,
     #ffffff,
@@ -90,6 +90,10 @@ button {
   cursor: pointer;
 }
 
+p {
+  font-size: 1.6rem;
+}
+
 a {
   color: inherit;
   cursor: pointer;
@@ -99,10 +103,6 @@ a {
   &:active {
     text-decoration: none;
   }
-}
-
-p {
-  font-size: 1.5rem;
 }
 
 .container_grid {
