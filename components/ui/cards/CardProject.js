@@ -1,7 +1,7 @@
 export const CardProject = ({ image, name, description, github, url }) => {
   return (
     <>
-      <div className="project">
+      <a className="project" href={url} target="_blank">
         <img className="project_image" src={image} />
         <h4 className="project_title">{name}</h4>
         <p className="project_description">{description}</p>
@@ -18,7 +18,7 @@ export const CardProject = ({ image, name, description, github, url }) => {
             <use xlinkHref="images/sprite.svg#icon-new-tab"></use>
           </svg>
         </a>
-      </div>
+      </a>
 
       <style jsx>{`
         .project {
