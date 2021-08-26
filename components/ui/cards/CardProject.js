@@ -1,23 +1,24 @@
 export const CardProject = ({ image, name, description, github, url }) => {
   return (
     <>
-      <a className="project" href={url} target="_blank">
-        <img className="project_image" src={image} />
-        <h4 className="project_title">{name}</h4>
-        <p className="project_description">{description}</p>
+      <a href={url} target="_blank">
+        <div className="project">
+          <img className="project_image" src={image} />
+          <h4 className="project_title">{name}</h4>
+          <p className="project_description">{description}</p>
 
-        <a href={github} target="_blank" className="project_link">
-          <svg className="project_icon">
-            <use xlinkHref="images/sprite.svg#icon-github"></use>
-          </svg>
-          <span>Github</span>
-        </a>
-
-        <a href={url} target="_blank" className="project_view">
-          <svg className="project_icon">
-            <use xlinkHref="images/sprite.svg#icon-new-tab"></use>
-          </svg>
-        </a>
+          <a href={github} target="_blank" className="project_link">
+            <svg className="project_icon">
+              <use xlinkHref="images/sprite.svg#icon-github"></use>
+            </svg>
+            <span>Github</span>
+          </a>
+          <a href={url} target="_blank" className="project_view">
+            <svg className="project_icon">
+              <use xlinkHref="images/sprite.svg#icon-new-tab"></use>
+            </svg>
+          </a>
+        </div>
       </a>
 
       <style jsx>{`

@@ -1,11 +1,15 @@
 import Link from 'next/link'
 import sty from '../../../helpers/styles/StyleButton'
 
-export const LinkSecundaryOutline = ({ children, href = '/', target }) => {
+export const LinkSecundaryOutline = ({
+  children,
+  href = '/',
+  target = '_self',
+}) => {
   return (
     <>
       <Link href={href}>
-        <a className={sty.btn} target={target ?? '_self'}>
+        <a className={sty.btn} target={target}>
           {children}
         </a>
       </Link>
