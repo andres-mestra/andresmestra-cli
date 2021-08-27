@@ -1,4 +1,4 @@
-import Icon from '../Icon'
+import Icon from '../ui/icons/Icon'
 import {
   setting__badge,
   setting__badge_icon,

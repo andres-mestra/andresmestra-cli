@@ -6,7 +6,7 @@ import {
   setting__icon,
   setting__input,
 } from '../../styles/components/settingsMenu.module.scss'
-import Icon from '../Icon'
+import Icon from '../ui/icons/Icon'
 
 const SettingsSlug = () => {
   const { post, actions } = usePost()

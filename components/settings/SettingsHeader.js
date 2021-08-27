@@ -1,5 +1,5 @@
 import { usePost } from '../../hooks/usePost'
-import Icon from '../Icon'
+import Icon from '../ui/icons/Icon'
 import {
   setting__header,
   setting__close,

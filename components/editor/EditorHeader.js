@@ -1,6 +1,6 @@
 import { usePost } from '../../hooks/usePost'
 import Link from 'next/link'
-import Icon from '../Icon'
+import Icon from '../ui/icons/Icon'
 import {
   editor__header,
   editor__return,
