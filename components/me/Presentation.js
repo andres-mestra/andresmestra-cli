@@ -13,11 +13,9 @@ export const Presentation = () => {
       <TitleSmall color="var(--color-secundary)">Hola, soy</TitleSmall>
       <TitleLarge>Andres Mestra</TitleLarge>
       <TitleMedium>Junior Front-end Developer</TitleMedium>
-      {/*TODO: Cambiar esta presentación*/}
       <Description>
-        Desarrollador web autodidacta desde hace 10 años, con mucha pasión por
-        seguir aprendiendo y en busca de su primera experiencia laboral como
-        front-end.
+        Desarrollador web autodidacta, con mucha pasión por seguir aprendiendo y
+        en busca de su primera experiencia laboral como front-end.
       </Description>
 
       <div className={sty.presentation__links}>
