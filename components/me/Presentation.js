@@ -15,7 +15,7 @@ export const Presentation = () => {
       <TitleMedium>Junior Front-end Developer</TitleMedium>
       <Description>
         Desarrollador web autodidacta, con mucha pasión por seguir aprendiendo y
-        en busca de su primera experiencia laboral como front-end.
+        en busca de su primera experiencia laboral como frontend.
       </Description>
 
       <div className={sty.presentation__links}>
