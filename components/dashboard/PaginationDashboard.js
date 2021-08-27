@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import Icon from '../Icon'
+import Icon from '../ui/icons/Icon'
 
 import {
   pagination__container,

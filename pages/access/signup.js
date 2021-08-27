@@ -9,14 +9,14 @@ import client from '../../config/apollo'
 import { REGISTER } from '../../queries/authQueries'
 import { signUpInit } from '../../utils/formInit'
 import LayoutAccess from '../../components/Layout/LayoutAccess'
+import FormGroup from '../../components/form/FormGroup'
 import {
   form,
   form__container,
   form__title,
   form__input,
   form__button,
-} from '../../styles/components/accessForm.module.scss'
-import FormGroup from '../../components/FormGroup'
+} from '../../styles/components/form/accessForm.module.scss'
 
 const SignUp = () => {
   const router = useRouter()

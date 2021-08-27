@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import Link from 'next/link'
-import Badge from '../Badge'
+import { Badge } from '../ui/Badge'
 import ContentListTags from './ContentListTags'
 import { dateShort } from '../../helpers/dateFormat'
 import {

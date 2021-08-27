@@ -1,4 +1,4 @@
-const Badge = ({ text, type }) => {
+export const Badge = ({ text, type }) => {
   return (
     <>
       <span className={`badge ${type ?? 'badge_border'}`}>{text}</span>
@@ -43,5 +43,3 @@ const Badge = ({ text, type }) => {
     </>
   )
 }
-
-export default Badge

@@ -1,11 +1,11 @@
-import Icon from './Icon'
+import Icon from '../ui/icons/Icon'
 import FormAlert from './FormAlert'
 import {
   form__control__group,
   form__input,
   form__control__group_error,
   form__icon,
-} from '../styles/components/accessForm.module.scss'
+} from '../../styles/components/form/accessForm.module.scss'
 
 const FormGroup = ({
   id,

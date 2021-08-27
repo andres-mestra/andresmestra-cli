@@ -1,4 +1,4 @@
-import Icon from '../../Icon'
+import Icon from '../icons/Icon'
 import sty from '../../../styles/components/ui/social.module.scss'
 
 export const Social = ({ link, icon }) => {

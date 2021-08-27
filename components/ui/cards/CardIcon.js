@@ -1,5 +1,5 @@
 import sty from '../../../styles/components/ui/cardIcon.module.scss'
-import Icon from '../../Icon'
+import Icon from '../icons/Icon'
 
 export const CardIcon = ({ icon, text }) => {
   return (

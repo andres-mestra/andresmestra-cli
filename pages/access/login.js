@@ -8,14 +8,14 @@ import client from '../../config/apollo'
 import { LOGIN } from '../../queries/authQueries'
 import { loginInit } from '../../utils/formInit'
 import LayoutAccess from '../../components/Layout/LayoutAccess'
-import FormGroup from '../../components/FormGroup'
+import FormGroup from '../../components/form/FormGroup'
 import {
   form,
   form__container,
   form__title,
   form__input,
   form__button,
-} from '../../styles/components/accessForm.module.scss'
+} from '../../styles/components/form/accessForm.module.scss'
 
 const Login = () => {
   const router = useRouter()
