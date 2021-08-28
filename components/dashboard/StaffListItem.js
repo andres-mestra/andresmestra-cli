@@ -8,7 +8,7 @@ import {
   list__figure,
   list__meta,
 } from '../../styles/components/dashboard/contentList.module.scss'
-import Badge from '../Badge'
+import { Badge } from '../ui/Badge'
 
 //TODO:Falta el editor
 const badge = {

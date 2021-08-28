@@ -4,7 +4,7 @@ export const Perfil = () => {
   return (
     <section
       className={sty.perfil}
-      style={{ backgroundImage: 'url(images/perfil_4.png)' }}
+      style={{ backgroundImage: 'url(images/perfil_4_comprimida.png)' }}
     ></section>
   )
 }
