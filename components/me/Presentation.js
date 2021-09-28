@@ -1,21 +1,27 @@
 import { Description } from '../text/Description'
 import { TitleLarge } from '../text/TitleLarge'
 import { TitleMedium } from '../text/TitleMedium'
-import { TitleSmall } from '../text/TitleSmall'
 import { LinkSecundary } from '../ui/buttons/LinkSecundary'
 import { LinkSecundaryOutline } from '../ui/buttons/LinkSecundaryOutline'
+import { Link } from '../ui/links/Link'
 
 import sty from '../../styles/components/me/presentation.module.scss'
 
 export const Presentation = () => {
   return (
     <section id="home" className={sty.presentation}>
-      <TitleSmall color="var(--color-secundary)">Hola, soy</TitleSmall>
-      <TitleLarge>Andres Mestra</TitleLarge>
+      <TitleLarge color="var(--color-secundary)">Andres Mestra</TitleLarge>
       <TitleMedium>Junior Front-end Developer</TitleMedium>
       <Description>
-        Desarrollador web autodidacta, con mucha pasión por seguir aprendiendo y
-        en busca de su primera experiencia laboral como frontend.
+        Desarrollador web autodidacta, con mucha pasión por seguir aprendiendo,
+        actualmente front-end developer en
+        <Link
+          target="_blank"
+          to="https://ticketplus.cl/"
+          color="var(--color-secundary)"
+        >
+          Ticketplus.cl
+        </Link>
       </Description>
 
       <div className={sty.presentation__links}>
