@@ -34,4 +34,11 @@ export const projects = [
     description:
       'Pagina wed de calificación y recomendaciones de hoteles, implementando layout basado en Flexbox',
   },
+  {
+    name: 'Petgram',
+    github: 'https://github.com/andres-mestra/react-avanzado-platzi',
+    url: 'https://petgram-mestra.vercel.app/',
+    images: ['images/projects/petgram.png'],
+    description: 'Petgram clone, tu app de fotos de mascotas domesticas',
+  },
 ]
