@@ -7,6 +7,8 @@ export const Description = ({ children }) => {
       <style jsx>{`
         p {
           font-size: 1.5rem;
+          text-align: justify;
+          max-width: 70ch;
         }
       `}</style>
     </>

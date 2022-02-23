@@ -5,6 +5,7 @@
   padding: 4rem;
   grid-column: center-start / center-end;
   display: grid;
+  justify-content: center;
 }
 
 @include bpLarge() {
