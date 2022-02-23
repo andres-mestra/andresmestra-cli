@@ -7,7 +7,7 @@ export const MyName = () => {
       <style jsx>{`
         h2 {
           font-size: 2rem;
-          color: var(--color-primary);
+          color: var(--color-secundary);
         }
 
         @media only screen and (max-width: 34.37rem) {

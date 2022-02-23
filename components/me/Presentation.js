@@ -11,7 +11,7 @@ export const Presentation = () => {
   return (
     <section id="home" className={sty.presentation}>
       <TitleLarge color="var(--color-secundary)">Andres Mestra</TitleLarge>
-      <TitleMedium>Junior Front-end Developer</TitleMedium>
+      <TitleMedium>Front-end Developer</TitleMedium>
       <Description>
         Desarrollador web autodidacta, con mucha pasión por seguir aprendiendo,
         actualmente front-end developer en
