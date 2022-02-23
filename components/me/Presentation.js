@@ -31,12 +31,12 @@ export const Presentation = () => {
         >
           Contacto
         </LinkSecundary>
-        <LinkSecundaryOutline
+        {/* <LinkSecundaryOutline
           href="CV/Jhon_Andres_Mestra_Tapias_Front_end_Web_Developer.pdf"
           target="_blank"
         >
           Descargar CV
-        </LinkSecundaryOutline>
+        </LinkSecundaryOutline> */}
       </div>
     </section>
   )

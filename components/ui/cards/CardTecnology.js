@@ -31,10 +31,11 @@ export const CardTecnology = ({
         .card__tecnology {
           background-image: linear-gradient(to right bottom, ${gradient});
           padding: 1rem;
-          display: grid;
-          grid-template-columns: min-content max-content;
-          place-content: center;
-          grid-column-gap: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          height: max-content;
         }
 
         .card__icon {
@@ -45,14 +46,12 @@ export const CardTecnology = ({
 
         .card__content {
           text-align: left;
-          padding: 0.5rem;
         }
 
         .card__title {
           color: var(--color-primary);
           font-size: 2rem;
           font-weight: 500;
-          margin-bottom: 0.5rem;
           line-height: 1;
         }
 
