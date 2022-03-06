@@ -15,7 +15,7 @@ export const Footer = () => {
       <div className={sty.links}>
         {thanks.map(({ name, link }) => (
           <a key={name} href={link} target="_blank">
-            {name},
+            {name}
           </a>
         ))}
       </div>

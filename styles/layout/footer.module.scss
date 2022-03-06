@@ -27,9 +27,10 @@
   a {
     font-size: 1.5rem;
     padding: 0.5rem 0;
+    border-bottom: 2px transparent solid;
 
     &:hover {
-      border-bottom: 1px var(--color-secundary) solid;
+      border-bottom-color: var(--color-secundary);
     }
   }
 }
