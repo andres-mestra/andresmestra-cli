@@ -13,8 +13,11 @@ export const Presentation = () => {
       <TitleLarge color="var(--color-secundary)">Andres Mestra</TitleLarge>
       <TitleMedium>Front-end Developer</TitleMedium>
       <Description>
-        Desarrollador web autodidacta, con mucha pasión por seguir aprendiendo,
-        actualmente front-end developer en
+        Tengo experiencia en el desarrollo de aplicaciones web, escritorio y
+        móviles, así como en la integración de hardware. Me comprometo con
+        soluciones innovadoras y efectivas y entiendo la importancia del
+        análisis y la comunicación en equipo para alcanzar el éxito del
+        proyecto. Actualmente trabajo en
         <Link
           target="_blank"
           to="https://ticketplus.cl/"
